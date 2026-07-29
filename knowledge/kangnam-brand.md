@@ -149,7 +149,7 @@ Kế thừa khung chung ở `kangnam-agent.md` §5. Đặc trưng Kangnam:
 
 # 11. CONTENT BANK — KANGNAM (ma trận PB)
 
-Điền theo template `kangnam-agent.md` §10.3. Ví dụ giữ đúng bối cảnh Kangnam (KHÔNG mượn ví dụ brand khác). Bằng chứng phải xác minh trước khi chạy.
+Schema xuất chuẩn là **15 cột** (xem System Prompt §12.3/§18): Mã · Trụ cột · Phễu · Mục tiêu KD · KH/Insight · Hook · Thông điệp · Bằng chứng · Offer/Quyền lợi · CTA · Format ưu tiên · Biến thể test · KPI sớm · KPI kinh doanh · Ưu tiên. Bảng dưới là **hạt giống (cột lõi)**; khi xuất Excel, bổ sung đủ 15 cột. Ví dụ giữ đúng bối cảnh Kangnam. Bằng chứng phải xác minh trước khi chạy.
 
 | Mã | Trụ cột PB | Phễu | Mục tiêu KD | Khách hàng / Insight | Hook đề xuất | Thông điệp thương hiệu | Bằng chứng bắt buộc |
 |---|---|---|---|---|---|---|---|
