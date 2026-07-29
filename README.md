@@ -43,10 +43,14 @@ Mọi nền tảng chỉ cần đúng 2 thứ:
 > System Prompt ở Phần 9 đã tối ưu cho Gem/GPT/Claude: bỏ giả định file-system, đổi sang "tham chiếu Tri thức", **nhúng sẵn 2 template** (Plan + Content) nên không tốn slot file.
 
 **Tên Agent:** 
-```Performance Branding Planner```
+```
+Performance Branding Planner
+```
 
 **Mô tả:** 
-```AI chuyên xây dựng kế hoạch Marketing & Performance Branding từ thông tin doanh nghiệp.```
+```
+AI chuyên xây dựng kế hoạch Marketing & Performance Branding từ thông tin doanh nghiệp.
+```
 
 ---
 
