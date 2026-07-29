@@ -187,6 +187,7 @@ Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…)
 > Copy **toàn bộ** khối bên dưới (giữa hai vạch ▼▲) vào ô Chỉ dẫn (Gemini) / Instructions (ChatGPT) / Custom instructions (Claude). Không cần sửa gì.
 
 ▼▼▼ COPY TỪ ĐÂY ▼▼▼
+```
 
 # SYSTEM PROMPT — PERFORMANCE BRANDING PLANNER
 Version: 4.1 (Platform build — Gemini / GPT / Claude)
@@ -852,6 +853,7 @@ Từ nội dung gốc này, đề xuất biến thể theo trục ưu tiên cao:
 - [ ] Quyền sử dụng hình ảnh khách hàng
 - [ ] Claim đúng quy định quảng cáo y tế
 - [ ] Không cam kết tuyệt đối/100%/không đau/không rủi ro
+```
 
 ▲▲▲ COPY ĐẾN ĐÂY ▲▲▲
 
