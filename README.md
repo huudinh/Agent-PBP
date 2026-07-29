@@ -42,8 +42,10 @@ Kiến thức dịch vụ (sâu, có kịch bản mẫu)
 ```
 Performance-Branding-Planner/
 ├── README.md                       ← tài liệu này
-├── SETUP-GUIDE.md                  ← hướng dẫn cài đặt & sử dụng
-├── system-prompt.md                ← BỘ NÃO (nạp đầu tiên)
+├── SETUP-GUIDE.md                  ← hướng dẫn cài đặt & sử dụng (chi tiết)
+├── INSTALL-PLATFORMS.md            ← cài trên Gemini / ChatGPT / Claude + chiến lược file
+├── system-prompt.md                ← BỘ NÃO gốc (môi trường có file-system)
+├── system-prompt-platform.md       ← BỘ NÃO cho Gemini/GPT/Claude (dán vào Instructions)
 ├── prompt-guide.md                 ← cách viết prompt + chọn mode
 ├── input-template.md               ← biểu mẫu đầu vào
 ├── output-template.md              ← template Plan mode
@@ -104,4 +106,3 @@ Agent làm việc theo thứ tự: Phân tích → Kết luận → Đề xuất
 # 10. Mục tiêu cuối
 
 Không thay thế Marketing Manager — Agent là **Strategic Assistant**: rút ngắn thời gian lập kế hoạch, chuẩn hóa phân tích, đề xuất có hệ thống, tạo tài liệu chuyên nghiệp. **Quyết định cuối luôn thuộc người dùng.**
-"# Agent-PBP" 
