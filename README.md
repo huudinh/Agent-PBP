@@ -19,7 +19,7 @@
 
 ---
 
-# 1. AGENT NÀY LÀ GÌ
+## 1. AGENT NÀY LÀ GÌ
 
 Performance Branding Planner đóng vai **Senior Marketing Strategist** (không chỉ viết content): phân tích doanh nghiệp → khách hàng → mục tiêu → xây chiến lược → kế hoạch → KPI → timeline, và sản xuất kịch bản/content theo phương pháp Performance Branding.
 
@@ -33,7 +33,7 @@ Performance Branding Planner đóng vai **Senior Marketing Strategist** (không 
 
 ---
 
-# 2. CÀI ĐẶT NHANH — 2 THÀNH PHẦN
+## 2. CÀI ĐẶT NHANH — 2 THÀNH PHẦN
 
 Mọi nền tảng chỉ cần đúng 2 thứ:
 
@@ -54,7 +54,7 @@ AI chuyên xây dựng kế hoạch Marketing & Performance Branding từ thông
 
 ---
 
-# 3. CHIẾN LƯỢC FILE (vì nền tảng giới hạn)
+## 3. CHIẾN LƯỢC FILE (vì nền tảng giới hạn)
 
 Giới hạn tri thức: **Gemini Gem = 10 file · ChatGPT (Custom GPT) = 20 file · Claude Project = theo dung lượng ngữ cảnh.** Chặt nhất là Gemini → thiết kế ≤5 file, vừa mọi nền tảng.
 
@@ -70,9 +70,9 @@ Giới hạn tri thức: **Gemini Gem = 10 file · ChatGPT (Custom GPT) = 20 fil
 
 ---
 
-# 4. CÀI TRÊN TỪNG NỀN TẢNG
+## 4. CÀI TRÊN TỪNG NỀN TẢNG
 
-## A. Gemini (Gem)
+### A. Gemini (Gem)
 1. Gemini → **Gem manager** (◇) → **New Gem**.
 2. **Tên** + **Mô tả** như Phần 2.
 3. **Chỉ dẫn:** dán toàn bộ Phần 9.
@@ -82,7 +82,7 @@ Giới hạn tri thức: **Gemini Gem = 10 file · ChatGPT (Custom GPT) = 20 fil
 - Có thể connect Google Drive để file tự cập nhật.
 - Người nhận link Gem thấy được Instructions + tên file → tránh để dữ liệu nhạy cảm.
 
-## B. ChatGPT (Custom GPT)
+### B. ChatGPT (Custom GPT)
 1. **Explore GPTs → Create → Configure**.
 2. **Name/Description** như Phần 2.
 3. **Instructions:** dán Phần 9.
@@ -91,28 +91,28 @@ Giới hạn tri thức: **Gemini Gem = 10 file · ChatGPT (Custom GPT) = 20 fil
    - "PLAN mode: kế hoạch Performance Branding cắt mí Kangnam 3 tháng."
    - "CONTENT mode: 3 kịch bản TOF hàm mặt Kangnam, mỗi bản 1 hook + 3 biến thể."
 
-## C. Claude (Project)
+### C. Claude (Project)
 1. **Projects → Create project**.
 2. **Custom instructions:** dán Phần 9.
 3. **Project knowledge:** thêm file brand + service.
 4. Chat trong project.
 
-## Smoke test (mọi nền tảng)
+### D. Smoke test (mọi nền tảng)
 Gửi: *"Bạn là ai, làm được gì, đang nạp brand nào? Phân biệt 2 mode."*
 Đạt khi Agent: nêu đúng vai trò · phân biệt PLAN/CONTENT · liệt kê đúng brand · không bịa, hỏi lại khi thiếu.
 
 ---
 
-# 5. CÁCH SỬ DỤNG
+## 5. CÁCH SỬ DỤNG
 
-## Quy trình
+### Quy trình
 ```
 Cấp thông tin → Agent kiểm tra & tóm tắt → Bạn xác nhận
 → Agent trình spec ngắn → Bạn xác nhận → Agent triển khai → Review → Tối ưu
 ```
 Agent luôn dừng chờ "ok/Xác nhận" trước khi triển khai — đây là thiết kế.
 
-## Hai chế độ (mode)
+### Hai chế độ (mode)
 | Mode | Dùng khi | Đầu ra |
 |---|---|---|
 | **PLAN** | Kế hoạch/chiến lược: Marketing Plan, Positioning, Big Idea, Content Strategy, Promotion, KPI, Timeline | Cấu trúc Executive Summary → Recommendation |
@@ -122,12 +122,12 @@ Không nêu mode → Agent hỏi lại.
 
 ---
 
-# 6. CÁCH RA LỆNH (PROMPT)
+## 6. CÁCH RA LỆNH (PROMPT)
 
-## Công thức chuẩn
+### Công thức chuẩn
 `Mode → Brand → Dịch vụ → Mục tiêu → Khách hàng → Website/dữ liệu → Thời gian → Đầu ra mong muốn → Ràng buộc`
 
-## Ví dụ PLAN
+### Ví dụ PLAN
 ```
 PLAN mode.
 Brand: Kangnam | Dịch vụ: Cắt mí
@@ -137,7 +137,7 @@ Ràng buộc: không cạnh tranh bằng giá, ưu tiên branding cao cấp
 Đầu ra: Business Analysis, Insight, Big Idea, Content Strategy, KPI, Timeline.
 ```
 
-## Ví dụ CONTENT
+### Ví dụ CONTENT
 ```
 CONTENT mode.
 Brand: Kangnam | Dịch vụ: Hàm mặt (móm do xương)
@@ -146,22 +146,22 @@ Yêu cầu: 2 kịch bản + storyboard, mỗi bản 1 hook chính + 3 biến th
 đánh dấu ⚠ chỗ cần xác minh (tên bác sĩ, case, số liệu).
 ```
 
-## Prompt theo bước (khi cần chi tiết)
+### Prompt theo bước (khi cần chi tiết)
 - "Phân tích doanh nghiệp dưới góc Marketing (mạnh/yếu/USP/cơ hội/thách thức). Chưa đề xuất giải pháp."
 - "Xây chân dung khách hàng: Persona, Pain, Need, Insight, Objection, Decision Trigger. Giải thích lý do."
 - "Từ Insight trên, đề xuất Big Idea + Key Message + Supporting Message, mỗi cái nêu lý do phù hợp."
 - "Đề xuất Promotion, ưu tiên quà/combo/membership/referral hơn giảm giá, nêu ưu–nhược."
 - "Đóng vai Marketing Director review kế hoạch theo Logic/Khả thi/ROI/KPI/Timeline, đề xuất cải thiện."
 
-## Nên tránh
+### Nên tránh
 ❌ "Viết kế hoạch marketing cho tôi." · ❌ "Cho tôi ý tưởng." · ❌ "Làm sao tăng doanh thu?" → quá chung chung, thiếu mục tiêu/bối cảnh → Agent buộc phải hỏi lại.
 
-## Xuất Excel (tự động)
+### Xuất Excel (tự động)
 Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…) Agent **tự hỏi** bạn có muốn xuất file Excel theo mẫu Kangnam. Trả lời "có" → Agent tạo file khớp mẫu trong `templates/` (ChatGPT/Claude sinh thẳng `.xlsx`; Gemini xuất bảng để bạn dán vào file mẫu). Mẫu tham chiếu: `templates/Kangnam-Content-Bank-Performance-Branding.xlsx` và `…-Ham-Mat.xlsx`.
 
 ---
 
-# 7. THÊM BRAND / DỊCH VỤ MỚI
+## 7. THÊM BRAND / DỊCH VỤ MỚI
 
 **Dịch vụ mới (cùng brand):** copy `service-_TEMPLATE.md` → `<brand>-service-<slug>.md` → điền Insight/USP/Bằng chứng/Khung TOF-MOF-BOF/Storyboard → cập nhật 1 dòng bảng dịch vụ trong `<brand>-market.md`.
 
@@ -169,7 +169,7 @@ Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…)
 
 ---
 
-# 8. XỬ LÝ SỰ CỐ
+## 8. XỬ LÝ SỰ CỐ
 
 | Hiện tượng | Cách xử lý |
 |---|---|
@@ -182,7 +182,7 @@ Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…)
 
 ---
 
-# 9. 📋 SYSTEM PROMPT — DÁN VÀO Ô CHỈ DẪN / INSTRUCTIONS
+## 9. 📋 SYSTEM PROMPT — DÁN VÀO Ô CHỈ DẪN / INSTRUCTIONS
 
 > Copy **toàn bộ** khối bên dưới (giữa hai vạch ▼▲) vào ô Chỉ dẫn (Gemini) / Instructions (ChatGPT) / Custom instructions (Claude). Không cần sửa gì.
 
