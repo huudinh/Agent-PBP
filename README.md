@@ -134,9 +134,10 @@ Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…)
 - **Gemini:** *không tạo được `.xlsx`* → Agent xuất **bảng đúng 15 cột** (hoặc CSV) để bạn **dán vào file mẫu** (mục 7.3).
 
 ### 7.2 Upload file mẫu vào Agent (tùy chọn — giúp Agent bám format)
-Muốn Agent tái tạo format chính xác tuyệt đối, upload 2 file mẫu vào **Tri thức**:
+Muốn Agent tái tạo format chính xác tuyệt đối, upload file mẫu vào **Tri thức**:
 - `templates/Kangnam-Content-Bank-Performance-Branding.xlsx` — bank tổng (nền header **navy #2E5496**).
 - `templates/Kangnam-Content-Bank-Ham-Mat.xlsx` — bank dịch vụ (nền header **tím #6B2E85**) + sheet *"Khung 4 tầng TOF"*.
+- `templates/Kangnam-Content-Plan.xlsx` — **Bảng Kế hoạch nội dung 3 tầng** (11 cột, nền header **teal #1F6F5C**), điền sẵn mẫu HN/HCM (ví dụ nâng mũi). Khớp CONTENT PLAN TEMPLATE §19.
 
 Cách upload:
 1. **Gemini:** New/Edit Gem → **Tri thức → Add files** → chọn 2 file `.xlsx` (tính vào giới hạn 10 file).
@@ -331,6 +332,7 @@ Quy tắc:
 
 - **System Prompt §9:** thêm **§19. CONTENT PLAN TEMPLATE** — schema 11 cột `Vùng | Tầng | Mục tiêu CD | Tệp nhắm | Định dạng Ads | % Ngân sách | KPI chính | Insight/Nỗi đau | Góc nội dung | Hook (đúng giọng vùng) | Ghi chú`. Tham chiếu ở §3 (mode) và §11 (Content Strategy). Version brain vẫn 4.2.
 - **`kangnam-market.md` §5:** thêm mục **"Nguyên tắc xây dựng nội dung 3 tầng theo vùng"** — dữ liệu TOF/MOF/BOF cho **HN** (chuyên môn/uy tín) và **HCM** (trend/cảm hứng/social proof): mục tiêu, tệp nhắm, định dạng, % ngân sách, KPI, insight, góc, hook mẫu.
+- **File mẫu mới:** `templates/Kangnam-Content-Plan.xlsx` (11 cột, header teal #1F6F5C, điền sẵn HN/HCM ví dụ nâng mũi) — xem §7.2.
 
 **Câu lệnh test:**
 ```
