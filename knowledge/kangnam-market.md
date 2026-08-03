@@ -183,6 +183,29 @@ Marketing không chỉ tạo Lead → còn xây thương hiệu, gia tăng niề
 
 **Content Pillar:** Kiến thức · Bác sĩ · Công nghệ · Before & After · Hành trình khách hàng · FAQ · Hậu phẫu · Hoạt động thương hiệu · Khuyến mại chọn lọc.
 
+## Nguyên tắc xây dựng nội dung 3 tầng theo vùng (TOF–MOF–BOF)
+Dữ liệu nền để lập **Bảng Kế hoạch nội dung** (output template §19 System Prompt). Mỗi tầng có mục tiêu CD, tệp nhắm, định dạng, % ngân sách, KPI, insight, góc nội dung và **Hook đúng giọng vùng** riêng. **HN** thiên chuyên môn/uy tín/an toàn; **HCM** thiên trend/cảm hứng/social proof. *(Hook mẫu bên dưới lấy ví dụ dịch vụ nâng mũi — thay insight/hook theo dịch vụ, giữ nguyên nguyên tắc tầng & giọng vùng.)*
+
+### Miền Bắc — HN + tỉnh lân cận (Bắc Ninh, Hưng Yên, Hải Phòng…)
+| Tầng | Mục tiêu CD (FB) | Tệp nhắm | Định dạng Ads | % NS | KPI chính | Insight / Nỗi đau | Góc nội dung | Hook mẫu (giọng vùng) |
+|---|---|---|---|---|---|---|---|---|
+| **TOF** (nhận biết/gieo niềm tin) | Lượt xem video / Tương tác | Nữ 28–45 HN + tỉnh, sở thích làm đẹp/công sở; broad + Lookalike 1–3% | Video bác sĩ | 25% | CPM · ThruPlay · CTR | Sợ chọn sai nơi/bác sĩ; coi trọng nơi uy tín | Khẳng định chuyên môn; định vị nơi uy tín | "Đằng sau một dáng mũi đẹp tự nhiên, không phải may rủi" · "Chọn nơi nâng mũi quan trọng như chọn dáng mũi" |
+| **MOF** (tìm hiểu, so sánh, củng cố niềm tin) | Traffic / Tin nhắn / Lead form | Người xem video ≥25%, tương tác Page/IG 365 ngày, truy cập web | Video chuyên sâu · carousel so sánh | 40% | CPL · cost/landing view | Cần chuyên môn rõ ràng; phân vân phương pháp | Giáo dục & so sánh chuyên sâu | "Trước khi nâng mũi, đây là 5 câu nên hỏi thẳng bác sĩ của bạn" · "Nâng mũi cấu trúc và bán cấu trúc khác nhau thế nào?" |
+| **BOF** (chốt – mời tư vấn) | Tin nhắn / Lead / Chuyển đổi | Truy cập LP 30 ngày, lead chưa đặt lịch, người nhắn tin, Lookalike người đã đặt lịch | Testimonial · mời đặt lịch | 35% | Booking · show-up · CPA | Cần an tâm trước khi quyết; tin kết quả thật | Mời trải nghiệm tư vấn; bằng chứng an tâm | "Đặt lịch khám & đo vẽ dáng mũi 1-1 cùng bác sĩ — phân tích trên chính gương mặt bạn" · "Hành trình nâng mũi tự nhiên của KH…" |
+
+Ghi chú vận hành: TOF bật rộng gom tệp warm · MOF nuôi dưỡng dài, nhấn chuyên môn & an toàn · BOF retarget mạnh, dùng ABO để kiểm soát.
+
+### Miền Nam — HCM + tỉnh (Bình Dương, Đồng Nai…)
+| Tầng | Mục tiêu CD (FB) | Tệp nhắm | Định dạng Ads | % NS | KPI chính | Insight / Nỗi đau | Góc nội dung | Hook mẫu (giọng vùng) |
+|---|---|---|---|---|---|---|---|---|
+| **TOF** (nhận biết, cảm hứng) | Lượt xem video / Tương tác | Nữ 22–40 HCM + tỉnh, sở thích KOL beauty/thời trang/giải trí; broad | Video biến đổi (KOC/KOL) | 35% | ThruPlay · CTR · CPM | Muốn nâng tầm nhan sắc; theo trend/KOL | Truyền cảm hứng visual; bắt trend | "Mũi đẹp là 'chìa khóa' thay đổi cả gương mặt!" · "Dáng mũi tự nhiên đang được nhiều người yêu thích - bạn hợp dáng nào?" |
+| **MOF** (bằng chứng thật) | Traffic / Tin nhắn | Người xem video, người tương tác, truy cập web | Video KOC review · carousel | 30% | CPL · time-view | Muốn thấy người giống mình; sợ không hợp mặt | Review thật; cá nhân hoá nhẹ | "Review thật: 30 ngày sau nâng mũi tại Kangnam trông thế nào?" · "Dáng mũi nào hợp gương mặt bạn? Soi nhanh cùng bác sĩ!" |
+| **BOF** (kết quả – trải nghiệm – ưu đãi) | Tin nhắn / Chuyển đổi | Truy cập LP, người nhắn tin, lead chưa đặt, Lookalike người chuyển đổi, danh sách CRM | Before–after · ưu đãi trải nghiệm | 35% | Booking · CPA | Quyết khi thấy kết quả; nhạy ưu đãi | Bằng chứng + mời; ưu đãi giới hạn | "Nhìn kết quả thật của khách giống bạn — đặt lịch trải nghiệm tư vấn cùng bác sĩ" · "Ưu đãi giới hạn - chỉ 10 suất nâng mũi trong tuần này" |
+
+Ghi chú vận hành: TOF đẩy nhiều creative trend, test liên tục · MOF lấy social proof làm chính · BOF có thể đẩy ưu đãi trải nghiệm, dùng ABO.
+
+**Quy tắc dùng:** tổng % ngân sách 3 tầng ≈ 100%/vùng · Hook bắt buộc đúng giọng vùng (không dùng chung 1 hook cho mọi vùng) · số liệu ngân sách/tệp là gợi ý khởi điểm, tối ưu theo dữ liệu thật · chưa có số thật → `⚠ Cần xác minh từ Kangnam`.
+
 ---
 
 # 6. CAMPAIGN FRAMEWORK
