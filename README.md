@@ -137,7 +137,7 @@ Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…)
 Muốn Agent tái tạo format chính xác tuyệt đối, upload file mẫu vào **Tri thức**:
 - `templates/Kangnam-Content-Bank-Performance-Branding.xlsx` — bank tổng (nền header **navy #2E5496**).
 - `templates/Kangnam-Content-Bank-Ham-Mat.xlsx` — bank dịch vụ (nền header **tím #6B2E85**) + sheet *"Khung 4 tầng TOF"*.
-- `templates/Kangnam-Content-Plan.xlsx` — **Bảng Kế hoạch nội dung 3 tầng** (11 cột, nền header **teal #1F6F5C**), điền sẵn mẫu HN/HCM (ví dụ nâng mũi). Khớp CONTENT PLAN TEMPLATE §19.
+- `templates/Kangnam-Content-Plan.xlsx` — **Bảng Kế hoạch nội dung 3 tầng** (11 cột, nền header **teal #1F6F5C**). 2 sheet: **"Kế hoạch nội dung"** (trống sẵn khung — dán dữ liệu từ dòng 6) + **"Ví dụ (nâng mũi)"** (HN/HCM mẫu để tham chiếu). Khớp CONTENT PLAN TEMPLATE §19. **Dành cho Gemini:** Agent xuất bảng/CSV → bạn dán vào sheet trống này.
 
 Cách upload:
 1. **Gemini:** New/Edit Gem → **Tri thức → Add files** → chọn 2 file `.xlsx` (tính vào giới hạn 10 file).
@@ -317,7 +317,7 @@ Quy tắc:
 - **Hook đúng giọng vùng** (bắt buộc): HN → chuyên môn/uy tín/an toàn; HCM → trend/cảm hứng/KOL/social proof. KHÔNG dùng chung 1 hook cho mọi vùng.
 - Insight/Hook/Định dạng bám dịch vụ & tệp; tham chiếu **6 nhóm khách hàng** (§1 kangnam-market) và mẫu vùng trong Tri thức.
 - Chưa có số liệu thật (ngân sách/KPI/tệp) → ghi gợi ý + `⚠ Cần xác minh từ Kangnam`; KHÔNG bịa KPI/ngân sách cứng.
-- Sau bảng → hỏi xuất Excel theo §15, đặt tên `Kangnam-Content-Plan-<DịchVụ>.xlsx`.
+- **Theo nền tảng:** ChatGPT (Data Analysis)/Claude → sinh thẳng `.xlsx` khớp mẫu (header teal), đặt tên `Kangnam-Content-Plan-<DịchVụ>.xlsx`. **Gemini KHÔNG tạo được file** → xuất **bảng 11 cột (hoặc CSV)** + nhắc người dùng dán vào `templates/Kangnam-Content-Plan.xlsx` **từ dòng 6** (giữ nguyên dòng 1–5). Ô chưa xác minh để `⚠ Cần xác minh từ Kangnam`.
 ```
 
 ▲▲▲ COPY ĐẾN ĐÂY ▲▲▲
