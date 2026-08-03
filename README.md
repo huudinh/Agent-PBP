@@ -137,7 +137,7 @@ Sau mỗi kết quả dạng bảng (Content Bank, storyboard, KPI, Timeline…)
 Muốn Agent tái tạo format chính xác tuyệt đối, upload file mẫu vào **Tri thức**:
 - `templates/Kangnam-Content-Bank-Performance-Branding.xlsx` — bank tổng (nền header **navy #2E5496**).
 - `templates/Kangnam-Content-Bank-Ham-Mat.xlsx` — bank dịch vụ (nền header **tím #6B2E85**) + sheet *"Khung 4 tầng TOF"*.
-- `templates/Kangnam-Content-Plan.xlsx` — **Bảng Kế hoạch nội dung 3 tầng** (11 cột, nền header **teal #1F6F5C**). 2 sheet: **"Kế hoạch nội dung"** (trống sẵn khung — dán dữ liệu từ dòng 6) + **"Ví dụ (nâng mũi)"** (HN/HCM mẫu để tham chiếu). Khớp CONTENT PLAN TEMPLATE §19. **Dành cho Gemini:** Agent xuất bảng/CSV → bạn dán vào sheet trống này.
+- `templates/Kangnam-Content-Plan.xlsx` — **Bảng Kế hoạch nội dung 3 tầng** (11 cột, nền header **teal #1F6F5C**). 2 sheet: **"Kế hoạch nội dung"** (khung sẵn — nơi nhận dữ liệu) + **"Ví dụ (nâng mũi)"** (HN/HCM mẫu tham chiếu). Khớp CONTENT PLAN TEMPLATE §19. Agent xuất **tự động** (Gemini: Export to Sheets · ChatGPT/Claude: file .xlsx) — xem §19/§15.
 
 Cách upload:
 1. **Gemini:** New/Edit Gem → **Tri thức → Add files** → chọn 2 file `.xlsx` (tính vào giới hạn 10 file).
@@ -262,6 +262,8 @@ Markdown gọn: heading, bullet, bảng khi so sánh, checklist khi cần. Khôn
 ## §15. TỰ ĐỘNG ĐỀ XUẤT XUẤT EXCEL
 Kích hoạt: ngay sau một kết quả **đúng, dạng bảng** (Content Bank, storyboard, KPI, Timeline, Action Plan). Hỏi một câu, một lần/deliverable: "Bạn có muốn xuất bảng này ra Excel theo mẫu Kangnam không? (có/không)". Không hỏi lại nếu đã từ chối; không hỏi cho trả lời hội thoại thuần.
 
+> **Ngoại lệ — Bảng Kế hoạch nội dung (§19): XUẤT TỰ ĐỘNG, KHÔNG HỎI.** Sau khi lập bảng, luôn xuất ngay bản sẵn sàng đưa vào bảng tính (bảng phẳng, không gộp ô). **Gemini** dùng nút *Export to Sheets*/tải về; **ChatGPT/Claude** sinh thẳng `.xlsx`. Không đặt câu hỏi "(có/không)".
+
 Khi đồng ý → tạo dữ liệu khớp mẫu: 1 sheet, đúng 15 cột (§12.3), bố cục:
 - Dòng 1 (gộp A1:O1, Arial đậm): `CONTENT BANK … | BỆNH VIỆN THẨM MỸ KANGNAM`
 - Dòng 2 (gộp A2:O2): Framework/Định vị. Dòng 3 (gộp A3:O3): Nguyên tắc.
@@ -317,7 +319,10 @@ Quy tắc:
 - **Hook đúng giọng vùng** (bắt buộc): HN → chuyên môn/uy tín/an toàn; HCM → trend/cảm hứng/KOL/social proof. KHÔNG dùng chung 1 hook cho mọi vùng.
 - Insight/Hook/Định dạng bám dịch vụ & tệp; tham chiếu **6 nhóm khách hàng** (§1 kangnam-market) và mẫu vùng trong Tri thức.
 - Chưa có số liệu thật (ngân sách/KPI/tệp) → ghi gợi ý + `⚠ Cần xác minh từ Kangnam`; KHÔNG bịa KPI/ngân sách cứng.
-- **Theo nền tảng:** ChatGPT (Data Analysis)/Claude → sinh thẳng `.xlsx` khớp mẫu (header teal), đặt tên `Kangnam-Content-Plan-<DịchVụ>.xlsx`. **Gemini KHÔNG tạo được file** → xuất **bảng 11 cột (hoặc CSV)** + nhắc người dùng dán vào `templates/Kangnam-Content-Plan.xlsx` **từ dòng 6** (giữ nguyên dòng 1–5). Ô chưa xác minh để `⚠ Cần xác minh từ Kangnam`.
+- **XUẤT FILE TỰ ĐỘNG (KHÔNG HỎI):** với Content Plan, **luôn tự xuất** ngay sau bảng — KHÔNG hỏi câu "(có/không)" ở §15. Xuất **1 bảng phẳng, sẵn sàng đưa vào bảng tính**: đúng 11 cột × header dòng đầu, **mỗi ô 1 giá trị, KHÔNG gộp ô**, mỗi vùng lặp lại tên vùng ở cột 1 cho từng dòng TOF/MOF/BOF (không để trống), nhiều hook trong 1 ô ngăn bằng xuống dòng. Nhờ vậy:
+  - **Gemini:** người dùng bấm **"Export to Sheets"** (hoặc tải về) trên bảng — chạy trực tiếp, không cần dán tay.
+  - **ChatGPT (Data Analysis)/Claude:** đồng thời sinh thẳng file `.xlsx` khớp mẫu (header teal), đặt tên `Kangnam-Content-Plan-<DịchVụ>.xlsx`, gửi link tải.
+- Chốt bằng 1 dòng: *"Đã xuất bảng sẵn sàng — Gemini bấm Export to Sheets; ChatGPT/Claude tải file .xlsx."* (không hỏi lại).
 ```
 
 ▲▲▲ COPY ĐẾN ĐÂY ▲▲▲
@@ -332,7 +337,8 @@ Quy tắc:
 
 - **System Prompt §9:** thêm **§19. CONTENT PLAN TEMPLATE** — schema 11 cột `Vùng | Tầng | Mục tiêu CD | Tệp nhắm | Định dạng Ads | % Ngân sách | KPI chính | Insight/Nỗi đau | Góc nội dung | Hook (đúng giọng vùng) | Ghi chú`. Tham chiếu ở §3 (mode) và §11 (Content Strategy). Version brain vẫn 4.2.
 - **`kangnam-market.md` §5:** thêm mục **"Nguyên tắc xây dựng nội dung 3 tầng theo vùng"** — dữ liệu TOF/MOF/BOF cho **HN** (chuyên môn/uy tín) và **HCM** (trend/cảm hứng/social proof): mục tiêu, tệp nhắm, định dạng, % ngân sách, KPI, insight, góc, hook mẫu.
-- **File mẫu mới:** `templates/Kangnam-Content-Plan.xlsx` (11 cột, header teal #1F6F5C, điền sẵn HN/HCM ví dụ nâng mũi) — xem §7.2.
+- **File mẫu mới:** `templates/Kangnam-Content-Plan.xlsx` (11 cột, header teal #1F6F5C) — 2 sheet: khung nhận dữ liệu + "Ví dụ (nâng mũi)". Xem §7.2.
+- **Xuất tự động:** §15 + §19 — Bảng Kế hoạch nội dung **tự xuất bản sẵn sàng (bảng phẳng, không gộp ô), KHÔNG hỏi "(có/không)"**. Gemini bấm *Export to Sheets*; ChatGPT/Claude sinh thẳng `.xlsx`.
 
 **Câu lệnh test:**
 ```
