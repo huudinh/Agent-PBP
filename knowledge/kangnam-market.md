@@ -19,6 +19,54 @@ Kiến thức về khách hàng, dịch vụ, bác sĩ, funnel Marketing, promot
 - **Chính:** muốn cải thiện ngoại hình · tăng tự tin · cần thẩm mỹ an toàn · ưu tiên thương hiệu uy tín.
 - **Phụ:** được giới thiệu · quay lại dùng dịch vụ khác · làm đẹp định kỳ.
 
+## 6 Nhóm khách hàng & Insight chuyên sâu
+Phân nhóm chiến lược để chọn đúng Insight/Hook/Bằng chứng theo tệp. Luôn bắt đầu từ Insight cảm xúc + Key tâm lý của đúng nhóm, không dùng chung một thông điệp cho mọi tệp.
+
+| Nhóm | Định danh truyền thông | Độ tuổi | Dịch vụ trọng tâm |
+|---|---|---|---|
+| 1 | Công sở & Người lao động tích góp | 25–45 | Cắt mí · Nâng mũi · Nâng ngực · Hút mỡ · Hàm mặt |
+| 2 | Doanh nhân / Thu nhập cao / Giới tinh hoa | 35–55 | Căng da · Trẻ hóa VIP · Nâng ngực · Hút mỡ · Cắt mí |
+| 3 | KOC/KOL trẻ, Creative, Gen Z | 20–30 | Nâng mũi · Nâng ngực · Filler · Độn cằm · Gọt hàm · Tạo hình môi · Hút mỡ Body |
+| 4 | Sinh viên / Nhân viên mới đi làm | 18–25 | Cắt mí · Nâng mũi · Chỉnh hàm hô/móm/lệch |
+| 5 | Khách sửa lại, từng làm hỏng nơi khác | 28–50 (Nam & Nữ) | Sửa mũi hỏng/co rút · Sửa mí lỗi · Hút mỡ hỏng/lồi lõm |
+| 6 | Khách trung niên muốn trẻ hóa | 40–55+ | Căng da mặt · Cấy mỡ mặt · Nâng cung · Combo cắt mí + cấy mỡ mắt |
+
+### Nhóm 1 — "Làm đẹp an toàn – Đầu tư xứng đáng"
+- **Chân dung:** 25–45 tuổi. Nhân viên VP, mẹ bỉm, buôn bán nhỏ, NV kinh doanh. Thu nhập trung bình–khá.
+- **Pain Point:** phải tích góp tiền làm đẹp · sợ rủi ro, biến chứng, sợ bị chê "phẫu thuật thất bại" · sợ đau, sợ ảnh hưởng công việc/chăm con · sợ bị mua hớ hoặc quảng cáo ảo · cần thấy bác sĩ thật, nơi thật, ca thật.
+- **Insight cảm xúc:** *"Tôi đã dành dụm để làm đẹp, nên tôi chỉ tin chọn nơi thật sự an toàn."* Làm đẹp là khoản đầu tư thông minh để tự tin và thăng hạng bản thân, không phải sự xa xỉ.
+- **Key tâm lý:** tâm lý đầu tư hợp lý · nhu cầu an toàn & bảo hành rõ ràng · tâm lý chứng minh bản thân · cần niềm tin từ chuyên môn & thương hiệu · sẵn sàng "cố" chi trả cao hơn để có chất lượng đảm bảo.
+
+### Nhóm 2 — "Đẳng cấp riêng – Đẹp kín tiếng"
+- **Chân dung:** 35–55 tuổi. Doanh nhân, chủ doanh nghiệp, chủ Spa, người của công chúng. Thu nhập cao / VIP.
+- **Pain Point:** sợ lộ dấu phẫu thuật, sợ thiếu tinh tế · sợ ồn ào, thiếu riêng tư, sợ bị bàn tán đời tư · sợ ảnh hưởng/mất lộc làm ăn phong thủy · cần bác sĩ giỏi tư vấn 1:1, không thích bị chèo kéo bán hàng.
+- **Insight cảm xúc:** *"Tôi chọn Kangnam không phải để khoe khoang, mà vì bản thân tôi xứng đáng với những gì tinh hoa, an toàn và riêng tư nhất."* Làm đẹp là đặc quyền của người biết chọn đúng nơi xứng tầm.
+- **Key tâm lý:** tâm lý đặc quyền & muốn kiểm soát · nhu cầu riêng tư & cá nhân hóa tối đa · tâm lý cầu toàn & duy mỹ · niềm tin vào công nghệ & thương hiệu cao cấp.
+
+### Nhóm 3 — "Theo trend – Cần đẹp nhanh & Hợp vibe"
+- **Chân dung:** 20–30 tuổi. Yêu cái đẹp, sống trên không gian số, làm sáng tạo, mẫu ảnh. Thu nhập linh hoạt.
+- **Pain Point:** sợ lỗi trend, kém sang vibe, xấu khi lên hình/stream · sợ quá trình hồi phục lâu làm gián đoạn công việc · lo "làm xong xấu hơn trước", sợ mất tương tác mạng xã hội · muốn liên tục update vẻ đẹp theo xu hướng.
+- **Insight cảm xúc:** *"Tôi không làm vì tự ti – tôi làm để không bị tụt lại và luôn nổi bật."* Làm đẹp là một phần của thương hiệu cá nhân, là vũ khí hình ảnh cạnh tranh.
+- **Key tâm lý:** tâm lý khẳng định bản thân · áp lực xã hội / cần sự công nhận · nhu cầu nổi bật trên không gian số · sợ lỗi thời, sợ "out vibe".
+
+### Nhóm 4 — "Trẻ – Thay đổi vì tương lai"
+- **Chân dung:** 18–25 tuổi. Sinh viên, mới ra trường đi làm. Thu nhập thấp–trung bình.
+- **Pain Point:** thu nhập thấp, sợ bị lừa quảng cáo giá rẻ nhưng cũng sợ bị mua hớ · sợ đau, sợ sẹo, sợ bị gia đình/bạn bè phát hiện · sợ biến chứng lần đầu trải nghiệm.
+- **Insight cảm xúc:** *"Tôi muốn thay đổi diện mạo để tự tin bước ra thế giới và nắm bắt cơ hội mới."* Làm đẹp là bước tự nâng cấp bản thân để hòa nhập và phát triển sự nghiệp.
+- **Key tâm lý:** tâm lý FOMO & mong muốn hội nhập · nhu cầu tự tin trong giao tiếp/phỏng vấn · muốn trải nghiệm nhẹ nhàng, dễ hiểu · mức độ tin vào feedback thực tế rất cao.
+
+### Nhóm 5 — "Tái tạo niềm tin"
+- **Chân dung:** 28–50 tuổi (cả Nam & Nữ). Từng phẫu thuật thất bại, co rút, lệch hỏng. Đa dạng thu nhập.
+- **Pain Point:** ám ảnh tâm lý sau thất bại, sợ lặp lại sai lầm · sợ bác sĩ thiếu tâm, tư vấn dối trá, chối bỏ trách nhiệm · kiệt quệ niềm tin và chi phí · cần nơi uy tín có chuyên khoa sửa lại, chứng minh bằng ca thực tế.
+- **Insight cảm xúc:** *"Tôi từng tin nhầm – giờ tôi chỉ cần một nơi có thể cho tôi lại sự an tâm bằng mắt thấy tai nghe."* Họ không tìm giá rẻ, họ tìm nơi chữa lành cả ngoại hình lẫn tổn thương niềm tin.
+- **Key tâm lý:** tâm lý cảnh giác cực cao & kiểm chứng kỹ · nhu cầu được lắng nghe, chữa lành & tôn trọng · nhu cầu phục hồi chức năng & thẩm mỹ · ra quyết định dựa trên bằng chứng y khoa.
+
+### Nhóm 6 — "Tìm lại tuổi xuân"
+- **Chân dung:** 40–55+ tuổi. Phụ nữ trung niên thành đạt, gia đình ổn định. Thu nhập khá–tốt.
+- **Pain Point:** vết dấu thời gian (lão hóa, chùng nhão) lộ rõ · sợ mặt bị đơ giả, sợ mất nét tự nhiên vốn có · sợ đau, sợ ảnh hưởng sức khỏe, thời gian nghỉ dưỡng lâu · quan tâm lớn đến quy trình an toàn & hậu phẫu.
+- **Insight cảm xúc:** *"Tôi không muốn biến thành người khác – tôi chỉ muốn tìm lại chính mình của những năm tháng đẹp nhất."* Làm đẹp là cách lưu giữ nét xuân và sự kiêu hãnh một cách tinh tế.
+- **Key tâm lý:** tâm lý kín đáo & tinh tế · nhu cầu trẻ hóa tự nhiên · sợ rủi ro sức khỏe · niềm tin tuyệt đối vào trình độ y khoa & chuyên gia.
+
 ## Insight cốt lõi
 > *"Tôi muốn thay đổi ngoại hình để tự tin hơn, nhưng chỉ sẵn sàng thực hiện khi thật sự tin tưởng vào bác sĩ, quy trình và kết quả."*
 
@@ -52,11 +100,11 @@ Video ngắn · Before & After · review khách hàng · chia sẻ bác sĩ · g
 
 | Nhóm | Dịch vụ | File chi tiết |
 |---|---|---|
-| Mắt | Cắt mí · Mở góc mắt · Lấy mỡ mí · Treo cung mày · Chỉnh sụp mí | services/eyes/ |
-| Mũi | Nâng mũi cấu trúc · Sụn sườn · Sửa mũi hỏng · Thu gọn cánh mũi | services/nose/ |
-| Khuôn mặt | Độn cằm · Gọt hàm · Hạ gò má · Căng da · **Chỉnh hình hàm mặt** | `kangnam-service-ham-mat.md` |
-| Vóc dáng | Hút mỡ · Nâng ngực · Thu nhỏ ngực · Tạo hình thành bụng | — |
-| Da | Trị nám · Trị sẹo · Trẻ hóa · Laser · Tiêm trẻ hóa | services/skin/ |
+| Mắt | Cắt mí · Mở góc mắt · Lấy mỡ mí · Treo cung mày (nâng cung) · Chỉnh sụp mí · Cấy mỡ mắt · Sửa mí lỗi | services/eyes/ |
+| Mũi | Nâng mũi cấu trúc · Sụn sườn · Sửa mũi hỏng/co rút · Thu gọn cánh mũi | services/nose/ |
+| Khuôn mặt | Độn cằm · Gọt hàm · Hạ gò má · Căng da · Cấy mỡ mặt · Tạo hình môi · **Chỉnh hình hàm mặt** (hô/móm/lệch) | `kangnam-service-ham-mat.md` |
+| Vóc dáng | Hút mỡ (Body) · Nâng ngực · Thu nhỏ ngực · Tạo hình thành bụng · Sửa hút mỡ hỏng/lồi lõm | — |
+| Da | Trị nám · Trị sẹo · Trẻ hóa · Laser · Tiêm trẻ hóa · Filler | services/skin/ |
 | Tóc | Cấy tóc · Điều trị rụng tóc | — |
 | Nha khoa | Implant · Niềng răng · Răng sứ · Tẩy trắng | services/dental/ |
 | Khám & CS | Tái khám · Chăm sóc hậu phẫu · Kiểm tra định kỳ | — |

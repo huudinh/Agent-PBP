@@ -15,6 +15,7 @@
 7. Xuất Excel & upload file mẫu
 8. Thêm brand / dịch vụ · Xử lý sự cố
 9. 📋 SYSTEM PROMPT (dán vào Instructions)
+10. Changelog / Cập nhật phiên bản
 
 ---
 
@@ -305,6 +306,52 @@ Trình bày theo thứ tự, mỗi mục một tiêu đề:
 ```
 
 ▲▲▲ COPY ĐẾN ĐÂY ▲▲▲
+
+---
+
+## 10. CHANGELOG / CẬP NHẬT PHIÊN BẢN
+
+> Ghi lại thay đổi **tầng Tri thức (brand/market)**. System Prompt §9 (brain trung tính) **không đổi** — vẫn version 4.2.
+
+### 2026-08-03 · Knowledge update — Insight khách hàng Kangnam
+
+**Thay đổi trong `knowledge/kangnam-market.md`:**
+- **§1 KHÁCH HÀNG:** thêm mục **"6 Nhóm khách hàng & Insight chuyên sâu"** — 1 bảng index + 6 khối persona, mỗi nhóm đủ 4 lớp *Chân dung · Pain Point · Insight cảm xúc · Key tâm lý*.
+
+  | Nhóm | Định danh | Tệp |
+  |---|---|---|
+  | 1 | Công sở & Người lao động tích góp | 25–45, làm đẹp an toàn – đầu tư xứng đáng |
+  | 2 | Doanh nhân / Giới tinh hoa | 35–55, đẳng cấp riêng – đẹp kín tiếng |
+  | 3 | KOC/KOL trẻ, Creative, Gen Z | 20–30, theo trend – đẹp nhanh hợp vibe |
+  | 4 | Sinh viên / NV mới đi làm | 18–25, thay đổi vì tương lai |
+  | 5 | Khách sửa lại (từng làm hỏng nơi khác) | 28–50, tái tạo niềm tin |
+  | 6 | Trung niên muốn trẻ hóa | 40–55+, tìm lại tuổi xuân |
+
+- **§2 HỆ THỐNG DỊCH VỤ:** bổ sung dịch vụ có trong sheet insight — **Filler** (Da), **Tạo hình môi · Cấy mỡ mặt** (Khuôn mặt), **Cấy mỡ mắt · Sửa mí lỗi** (Mắt), **Sửa hút mỡ hỏng/lồi lõm** (Vóc dáng), chú thích **Sửa mũi hỏng/co rút**. Quy trình/công nghệ/chi phí các dịch vụ mới vẫn `⚠ Cần xác minh từ Kangnam` (guardrail §13).
+
+**Câu lệnh test (dán vào Agent sau khi nạp lại file):**
+
+1. Nạp đủ 6 nhóm:
+```
+Liệt kê đủ 6 nhóm khách hàng Kangnam kèm tên định danh truyền thông và dịch vụ trọng tâm của từng nhóm.
+```
+→ Đạt: ra đúng 6 nhóm (Nhóm 1 "Công sở & tích góp" … Nhóm 6 "Tìm lại tuổi xuân").
+
+2. Dùng được Insight chiều sâu:
+```
+PLAN mode. Brand: Kangnam | Dịch vụ: Sửa mũi hỏng
+Khách hàng: nhóm từng làm hỏng nơi khác.
+Cho tôi phần Customer Analysis (Insight + Key tâm lý + Objection).
+```
+→ Đạt: bám đúng Nhóm 5 "Tái tạo niềm tin" (cảnh giác cực cao, đòi ca thật/bằng chứng y khoa), không chung chung.
+
+3. Dịch vụ mới đã nhận:
+```
+Filler và Tạo hình môi có nằm trong hệ thống dịch vụ Kangnam không? Thuộc nhóm nào?
+```
+→ Đạt: xác nhận Filler thuộc Da, Tạo hình môi thuộc Khuôn mặt.
+
+> **Lưu ý nạp lại:** sửa file `.md` chưa đủ — phải cập nhật vào nền tảng thì Agent mới thấy. **Claude/ChatGPT:** xóa file cũ trong Knowledge → upload lại. **Gemini:** Edit Gem → Tri thức → thay file (hoặc để Google Drive tự đồng bộ nếu đã connect).
 
 ---
 
