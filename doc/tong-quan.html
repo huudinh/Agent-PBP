@@ -1,4 +1,4 @@
-<title>Performance Branding Planner — Tổng quan chức năng</title>
+<title>Performance Branding Planner — Trang đào tạo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root{
@@ -8,6 +8,7 @@
     --purple:#97701C; --purple-tint:#F3E8CD;  /* CONTENT — hoàng thổ */
     --teal:#5E6B33; --teal-tint:#E8EAD1;       /* CONTENT PLAN — ô-liu ấm */
     --warn:#A8442A; --warn-tint:#F4E1D6;
+    --term:#241C14; --term-ink:#EFE4D2;
     --accent:var(--navy);
     --shadow:0 1px 2px rgba(60,42,26,.05), 0 8px 24px -12px rgba(60,42,26,.18);
     --radius:14px;
@@ -16,10 +17,9 @@
     :root{
       --paper:#17100A; --surface:#211810; --surface-2:#2A2015;
       --ink:#F2E9DA; --muted:#B2A48E; --faint:#7E7060; --line:#392C1D;
-      --navy:#E38A67; --navy-tint:#341F17;
-      --purple:#E0B85F; --purple-tint:#33290F;
-      --teal:#B4C06E; --teal-tint:#26290F;
-      --warn:#E8896B; --warn-tint:#331E16;
+      --navy:#E38A67; --navy-tint:#341F17; --purple:#E0B85F; --purple-tint:#33290F;
+      --teal:#B4C06E; --teal-tint:#26290F; --warn:#E8896B; --warn-tint:#331E16;
+      --term:#100B07; --term-ink:#ECE1CF;
       --shadow:0 1px 2px rgba(0,0,0,.35), 0 10px 30px -14px rgba(0,0,0,.6);
     }
   }
@@ -28,6 +28,7 @@
     --ink:#2A2019; --muted:#7C6E5E; --faint:#A6947F; --line:#E6DAC8;
     --navy:#A94A34; --navy-tint:#F3E2DA; --purple:#97701C; --purple-tint:#F3E8CD;
     --teal:#5E6B33; --teal-tint:#E8EAD1; --warn:#A8442A; --warn-tint:#F4E1D6;
+    --term:#241C14; --term-ink:#EFE4D2;
     --shadow:0 1px 2px rgba(60,42,26,.05), 0 8px 24px -12px rgba(60,42,26,.18);
   }
   :root[data-theme="dark"]{
@@ -35,184 +36,148 @@
     --ink:#F2E9DA; --muted:#B2A48E; --faint:#7E7060; --line:#392C1D;
     --navy:#E38A67; --navy-tint:#341F17; --purple:#E0B85F; --purple-tint:#33290F;
     --teal:#B4C06E; --teal-tint:#26290F; --warn:#E8896B; --warn-tint:#331E16;
+    --term:#100B07; --term-ink:#ECE1CF;
     --shadow:0 1px 2px rgba(0,0,0,.35), 0 10px 30px -14px rgba(0,0,0,.6);
   }
 
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:"Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
-    font-size:16px; line-height:1.55; letter-spacing:-.005em;
-    -webkit-font-smoothing:antialiased;
+    font-size:16px; line-height:1.55; letter-spacing:-.005em; -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:1080px; margin:0 auto; padding:0 24px}
-  section{padding:clamp(34px,5vw,56px) 0; border-top:1px solid var(--line)}
-  h2{font-size:clamp(1.15rem,2.4vw,1.5rem); margin:0 0 6px; letter-spacing:-.02em; text-wrap:balance}
-  .lead{color:var(--muted); margin:0 0 26px; max-width:60ch}
-  .eyebrow{
-    font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-    color:var(--faint); margin:0 0 12px;
-  }
+  section{padding:clamp(34px,5vw,54px) 0; border-top:1px solid var(--line); scroll-margin-top:64px}
+  h2{font-size:clamp(1.15rem,2.4vw,1.55rem); margin:0 0 6px; letter-spacing:-.02em; text-wrap:balance}
+  .lead{color:var(--muted); margin:0 0 26px; max-width:64ch}
+  .eyebrow{font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin:0 0 12px}
+  code{font-family:ui-monospace,"Cascadia Code",Consolas,monospace; background:var(--surface-2); padding:1px 6px; border-radius:5px; font-size:.85em}
 
-  /* ---- header ---- */
-  header{padding:clamp(30px,5vw,48px) 0 6px}
-  .topbar{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
-  .brand{display:flex; align-items:center; gap:12px}
-  .mark{
-    width:40px; height:40px; border-radius:11px; flex:none;
-    background:linear-gradient(140deg,var(--navy),var(--purple) 55%,var(--teal));
-    display:grid; place-items:center; color:#fff; font-size:20px;
-    box-shadow:var(--shadow);
-  }
-  .brand b{font-size:1.06rem; letter-spacing:-.02em; display:block; line-height:1.2}
-  .brand span{font-size:.8rem; color:var(--muted)}
-  .vpill{
-    font-size:.74rem; font-weight:600; color:var(--muted);
-    border:1px solid var(--line); border-radius:999px; padding:5px 12px; background:var(--surface);
-  }
-  .theme-btn{
-    font:inherit; font-size:.8rem; cursor:pointer; color:var(--muted);
-    background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 12px;
-  }
+  /* ---- sticky nav ---- */
+  .nav{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--paper) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex; align-items:center; gap:8px; height:52px; overflow-x:auto; scrollbar-width:none}
+  .nav .wrap::-webkit-scrollbar{display:none}
+  .nav a{font-size:.83rem; color:var(--muted); text-decoration:none; padding:6px 11px; border-radius:8px; white-space:nowrap; font-weight:600}
+  .nav a:hover{color:var(--ink); background:var(--surface-2)}
+  .nav .nb{margin-right:auto; font-weight:750; color:var(--ink); font-size:.9rem; letter-spacing:-.01em}
+  .theme-btn{font:inherit; font-size:.8rem; cursor:pointer; color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 12px; white-space:nowrap}
   .theme-btn:hover{color:var(--ink)}
 
-  /* ---- hero ---- */
-  .hero{padding:26px 0 8px}
-  .hero h1{
-    font-size:clamp(1.7rem,4.4vw,2.7rem); line-height:1.08; letter-spacing:-.035em;
-    margin:0 0 14px; text-wrap:balance; max-width:20ch;
-  }
-  .hero h1 em{font-style:normal; color:var(--accent)}
-  .hero p{font-size:1.05rem; color:var(--muted); max-width:62ch; margin:0 0 24px}
-  .pipe{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:8px}
-  .pipe .step{
-    font-size:.82rem; font-weight:600; background:var(--surface); border:1px solid var(--line);
-    border-radius:9px; padding:7px 12px; white-space:nowrap; box-shadow:var(--shadow);
-  }
-  .pipe .arw{color:var(--faint); font-size:.9rem}
+  /* ---- header ---- */
+  header{padding:clamp(28px,5vw,44px) 0 4px}
+  .brand{display:flex; align-items:center; gap:12px}
+  .mark{width:42px; height:42px; border-radius:12px; flex:none; background:linear-gradient(140deg,var(--navy),var(--purple) 55%,var(--teal)); display:grid; place-items:center; color:#fff; font-size:20px; box-shadow:var(--shadow)}
+  .brand b{font-size:1.08rem; letter-spacing:-.02em; display:block; line-height:1.2}
+  .brand span{font-size:.8rem; color:var(--muted)}
 
-  /* ---- stats ---- */
-  .stats{
-    display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin-top:30px;
-  }
-  .stat{
-    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-    padding:16px 16px 14px; box-shadow:var(--shadow);
-  }
+  .hero{padding:26px 0 8px}
+  .hero h1{font-size:clamp(1.7rem,4.3vw,2.6rem); line-height:1.09; letter-spacing:-.035em; margin:0 0 14px; text-wrap:balance; max-width:22ch}
+  .hero h1 em{font-style:normal; color:var(--accent)}
+  .hero p{font-size:1.05rem; color:var(--muted); max-width:64ch; margin:0 0 22px}
+  .pipe{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:6px}
+  .pipe .step{font-size:.82rem; font-weight:600; background:var(--surface); border:1px solid var(--line); border-radius:9px; padding:7px 12px; white-space:nowrap; box-shadow:var(--shadow)}
+  .pipe .arw{color:var(--faint)}
+
+  .stats{display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin-top:28px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
   .stat .n{font-size:1.9rem; font-weight:750; letter-spacing:-.03em; font-variant-numeric:tabular-nums; line-height:1}
   .stat .l{font-size:.78rem; color:var(--muted); margin-top:6px; line-height:1.3}
   @media(max-width:760px){.stats{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:420px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-  /* ---- grids ---- */
   .grid{display:grid; gap:16px}
-  .g3{grid-template-columns:repeat(3,1fr)}
-  .g2{grid-template-columns:repeat(2,1fr)}
-  .g4{grid-template-columns:repeat(4,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
   @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
-
-  .card{
-    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-    padding:20px; box-shadow:var(--shadow); position:relative;
-    transition:transform .18s ease, box-shadow .18s ease;
-  }
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); transition:transform .18s ease}
   .card:hover{transform:translateY(-2px)}
 
-  /* mode cards */
   .mode{border-top:3px solid var(--c)}
-  .mode.plan{--c:var(--navy); --ct:var(--navy-tint)}
-  .mode.content{--c:var(--purple); --ct:var(--purple-tint)}
-  .mode.plancol{--c:var(--teal); --ct:var(--teal-tint)}
-  .mode .tag{
-    display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.06em;
-    color:var(--c); background:var(--ct); border-radius:6px; padding:4px 9px; margin-bottom:12px;
-  }
-  .mode h3{margin:0 0 4px; font-size:1.08rem; letter-spacing:-.02em}
-  .mode .use{font-size:.85rem; color:var(--muted); margin:0 0 14px}
+  .mode.plan{--c:var(--navy); --ct:var(--navy-tint)} .mode.content{--c:var(--purple); --ct:var(--purple-tint)} .mode.plancol{--c:var(--teal); --ct:var(--teal-tint)}
+  .mode .tag{display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.05em; color:var(--c); background:var(--ct); border-radius:6px; padding:4px 9px; margin-bottom:12px}
+  .mode h3{margin:0 0 4px; font-size:1.08rem; letter-spacing:-.02em} .mode .use{font-size:.85rem; color:var(--muted); margin:0 0 14px}
   .mode ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:7px}
-  .mode li{font-size:.86rem; padding-left:18px; position:relative; color:var(--ink)}
-  .mode li::before{content:""; position:absolute; left:0; top:.5em; width:6px; height:6px; border-radius:50%; background:var(--c)}
+  .mode li{font-size:.86rem; padding-left:18px; position:relative} .mode li::before{content:""; position:absolute; left:0; top:.5em; width:6px; height:6px; border-radius:50%; background:var(--c)}
   .mode .out{font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--faint); margin:16px 0 8px}
 
-  /* feature list card */
-  .feat h3{margin:0 0 3px; font-size:.98rem; letter-spacing:-.01em}
-  .feat p{margin:0; font-size:.85rem; color:var(--muted)}
-  .feat .k{
-    font-size:.7rem; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums;
-    letter-spacing:.02em;
-  }
+  .feat h3{margin:0 0 3px; font-size:.98rem} .feat p{margin:0; font-size:.85rem; color:var(--muted)}
+  .feat .k{font-size:.7rem; font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums}
 
-  /* architecture */
   .arch{display:flex; flex-direction:column; gap:12px}
-  .layer{
-    display:grid; grid-template-columns:150px 1fr; gap:18px; align-items:center;
-    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--c);
-    border-radius:12px; padding:16px 20px; box-shadow:var(--shadow);
-  }
-  .layer .lt{font-weight:700; font-size:.95rem; color:var(--c)}
-  .layer .ld{font-size:.86rem; color:var(--muted)}
-  .layer .ld code{background:var(--surface-2); padding:1px 6px; border-radius:5px; font-size:.82em}
+  .layer{display:grid; grid-template-columns:150px 1fr; gap:18px; align-items:center; background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--c); border-radius:12px; padding:16px 20px; box-shadow:var(--shadow)}
+  .layer .lt{font-weight:700; font-size:.95rem; color:var(--c)} .layer .ld{font-size:.86rem; color:var(--muted)}
   .layer.l1{--c:var(--navy)} .layer.l2{--c:var(--purple)} .layer.l3{--c:var(--teal)}
   @media(max-width:560px){.layer{grid-template-columns:1fr; gap:6px}}
 
-  /* knowledge chips */
-  .kgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
-  @media(max-width:560px){.kgrid{grid-template-columns:1fr}}
+  .kgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px} @media(max-width:560px){.kgrid{grid-template-columns:1fr}}
   .kcard h3{margin:0 0 8px; font-size:.92rem}
-  .chips{display:flex; flex-wrap:wrap; gap:6px}
-  .chip{font-size:.78rem; background:var(--surface-2); border:1px solid var(--line); border-radius:7px; padding:4px 9px; color:var(--ink)}
+  .chips{display:flex; flex-wrap:wrap; gap:6px} .chip{font-size:.78rem; background:var(--surface-2); border:1px solid var(--line); border-radius:7px; padding:4px 9px}
 
-  /* excel table */
   .tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow)}
   table{border-collapse:collapse; width:100%; min-width:520px; background:var(--surface)}
-  th,td{text-align:left; padding:12px 16px; font-size:.86rem; border-bottom:1px solid var(--line)}
-  th{font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--faint); font-weight:700}
+  th,td{text-align:left; padding:11px 15px; font-size:.85rem; border-bottom:1px solid var(--line); vertical-align:top}
+  th{font-size:.71rem; text-transform:uppercase; letter-spacing:.07em; color:var(--faint); font-weight:700}
   tbody tr:last-child td{border-bottom:none}
   .swatch{display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:7px; vertical-align:middle; border:1px solid rgba(0,0,0,.15)}
-  .auto-yes{color:var(--teal); font-weight:650}
-  .auto-ask{color:var(--muted)}
+  .auto-yes{color:var(--teal); font-weight:650} .auto-ask{color:var(--muted)}
 
-  /* guardrails */
+  /* ---- training example ---- */
+  .ex{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; margin-bottom:18px}
+  .ex>.exhd{padding:15px 20px; border-bottom:1px solid var(--line); display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+  .ex>.exhd .id{font-size:.72rem; font-weight:800; letter-spacing:.06em; color:var(--accent); font-variant-numeric:tabular-nums}
+  .ex>.exhd h3{margin:0; font-size:1rem; letter-spacing:-.01em}
+  .ex .body{padding:18px 20px; display:flex; flex-direction:column; gap:14px}
+  .prompt{background:var(--term); color:var(--term-ink); border-radius:10px; padding:13px 15px 14px; font-family:ui-monospace,"Cascadia Code",Consolas,monospace; font-size:.82rem; line-height:1.5; white-space:pre-wrap; overflow-x:auto}
+  .prompt .lbl{display:block; font-size:.66rem; font-weight:700; letter-spacing:.12em; color:#D9A88C; margin-bottom:8px; text-transform:uppercase}
+  .output{background:var(--surface-2); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; padding:14px 18px}
+  .output>.lbl{display:block; font-size:.66rem; font-weight:700; letter-spacing:.12em; color:var(--muted); margin-bottom:10px; text-transform:uppercase}
+  .output p{margin:.4em 0} .output ul{margin:.4em 0; padding-left:20px} .output li{margin:.25em 0; font-size:.9rem}
+  .output h4{margin:.7em 0 .2em; font-size:.9rem}
+  .output blockquote{margin:.5em 0; padding:8px 14px; border-left:3px solid var(--faint); background:var(--surface); border-radius:0 8px 8px 0; font-style:italic; color:var(--ink)}
+  .output .tblwrap{box-shadow:none}
+  .output table{min-width:480px} .output th,.output td{padding:8px 12px; font-size:.8rem}
+  .flag{color:var(--warn); font-weight:650}
+  .exnote{background:var(--navy-tint); border-radius:8px; padding:11px 14px; font-size:.85rem; color:var(--ink)}
+  .exnote b{color:var(--accent)}
+
   .guard{background:var(--warn-tint); border:1px solid color-mix(in srgb,var(--warn) 30%,transparent); border-left:4px solid var(--warn); border-radius:12px; padding:20px 22px}
-  .guard h3{margin:0 0 10px; font-size:.98rem; color:var(--warn); display:flex; align-items:center; gap:8px}
-  .guard ul{margin:0; padding-left:18px; columns:2; column-gap:32px; font-size:.87rem}
-  .guard li{margin:0 0 6px; break-inside:avoid}
-  .guard .flag{margin-top:14px; font-size:.83rem; color:var(--ink)}
-  .guard code{background:var(--surface); padding:2px 7px; border-radius:5px; font-size:.85em; border:1px solid var(--line)}
-  @media(max-width:560px){.guard ul{columns:1}}
+  .guard h3{margin:0 0 10px; font-size:.98rem; color:var(--warn); display:flex; gap:8px}
+  .guard ul{margin:0; padding-left:18px; columns:2; column-gap:32px; font-size:.87rem} .guard li{margin:0 0 6px; break-inside:avoid}
+  .guard .fl{margin-top:14px; font-size:.83rem} @media(max-width:560px){.guard ul{columns:1}}
 
-  footer{border-top:1px solid var(--line); padding:26px 0 46px; color:var(--muted); font-size:.83rem}
-  footer b{color:var(--ink)}
-
-  /* motion */
+  footer{border-top:1px solid var(--line); padding:26px 0 46px; color:var(--muted); font-size:.83rem} footer b{color:var(--ink)}
   .rise{opacity:0; transform:translateY(10px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
   @keyframes rise{to{opacity:1; transform:none}}
   @media(prefers-reduced-motion:reduce){.rise{animation:none; opacity:1; transform:none}.card{transition:none}}
   :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
 </style>
 
+<nav class="nav">
+  <div class="wrap">
+    <span class="nb">◆ PBP · Đào tạo</span>
+    <a href="#tong-quan">Tổng quan</a>
+    <a href="#che-do">3 Chế độ</a>
+    <a href="#kien-truc">Kiến trúc</a>
+    <a href="#dao-tao">Prompt → Đầu ra</a>
+    <a href="#guardrails">Guardrails</a>
+    <a href="#bai-tap">Bài tập</a>
+    <button class="theme-btn" id="tg" type="button" aria-label="Đổi giao diện">◐</button>
+  </div>
+</nav>
+
 <div class="wrap">
-  <header>
-    <div class="topbar">
-      <div class="brand">
-        <div class="mark" aria-hidden="true">◆</div>
-        <div>
-          <b>Performance Branding Planner</b>
-          <span>Agent Marketing &amp; Performance Branding · HCI Group</span>
-        </div>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center">
-        <span class="vpill">Version 4.2</span>
-        <button class="theme-btn" id="tg" type="button" aria-label="Đổi giao diện sáng/tối">◐ Giao diện</button>
-      </div>
+  <header id="tong-quan">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">◆</div>
+      <div><b>Performance Branding Planner</b><span>Trang đào tạo · Agent Marketing &amp; Performance Branding · HCI Group · v4.2</span></div>
     </div>
   </header>
 
   <div class="hero rise">
-    <h1>Một Agent — tư vấn <em>chiến lược</em> và sản xuất <em>content</em> theo phương pháp Performance Branding.</h1>
-    <p>Đóng vai Senior Marketing Strategist: đi từ phân tích đến kế hoạch triển khai đo được, không chỉ viết chữ. Bộ não trung tính dùng chung mọi brand; voice &amp; dữ liệu riêng nằm ở tầng kiến thức.</p>
+    <h1>Một trang để <em>hiểu</em> và <em>vận hành</em> đúng Agent Performance Branding Planner.</h1>
+    <p>Nửa trên: bản đồ năng lực. Nửa dưới: từng năng lực kèm <b>prompt đầu vào → đầu ra mẫu</b> và bài tập. Đủ để một người mới ra lệnh đúng ngay từ ngày đầu.</p>
     <div class="pipe" aria-label="Quy trình tư duy">
       <span class="step">Phân tích DN</span><span class="arw">→</span>
       <span class="step">Khách hàng</span><span class="arw">→</span>
@@ -222,7 +187,6 @@
       <span class="step">KPI</span><span class="arw">→</span>
       <span class="step">Timeline</span>
     </div>
-
     <div class="stats">
       <div class="stat"><div class="n">3</div><div class="l">Chế độ đầu ra</div></div>
       <div class="stat"><div class="n">19</div><div class="l">Mục trong bộ não</div></div>
@@ -234,70 +198,36 @@
   </div>
 
   <!-- MODES -->
-  <section>
-    <p class="eyebrow">Chức năng chính</p>
+  <section id="che-do">
+    <p class="eyebrow">Bản đồ năng lực · 01</p>
     <h2>Ba chế độ đầu ra</h2>
-    <p class="lead">Mỗi chế độ có template riêng trong System Prompt. Màu ở đây trùng đúng màu header của file Excel tương ứng.</p>
+    <p class="lead">Mỗi chế độ có template riêng. Màu ở đây là hệ nhận diện của trang; màu header file Excel thật xem ở mục “Xuất Excel”.</p>
     <div class="grid g3">
-      <div class="card mode plan">
-        <span class="tag">PLAN · §17</span>
-        <h3>Kế hoạch &amp; Chiến lược</h3>
-        <p class="use">Khi cần Marketing Plan, Positioning, Big Idea, Promotion, KPI, Timeline.</p>
-        <div class="out">Đầu ra — 16 mục</div>
-        <ul>
-          <li>Executive Summary → Recommendation</li>
-          <li>Business &amp; Customer Analysis</li>
-          <li>Positioning · Big Idea · Content Strategy</li>
-          <li>KPI đo được · Action Plan · Risk</li>
-        </ul>
-      </div>
-      <div class="card mode content">
-        <span class="tag">CONTENT · §18</span>
-        <h3>Content &amp; Kịch bản</h3>
-        <p class="use">Khi cần video script, hook, storyboard, content bank, nhân bản.</p>
-        <div class="out">Đầu ra</div>
-        <ul>
-          <li>Khung 5 lớp Insight → Offer</li>
-          <li>Hook chính + 3 biến thể</li>
-          <li>Storyboard 6 cột</li>
-          <li>Content Bank 15 cột + phương án nhân bản</li>
-        </ul>
-      </div>
-      <div class="card mode plancol">
-        <span class="tag">CONTENT PLAN · §19</span>
-        <h3>Kế hoạch nội dung theo phễu</h3>
-        <p class="use">Khi cần phân bổ nội dung/ads theo phễu &amp; theo vùng.</p>
-        <div class="out">Đầu ra</div>
-        <ul>
-          <li>Bảng 3 tầng TOF · MOF · BOF</li>
-          <li>11 cột, tách theo vùng HN / HCM</li>
-          <li>Hook đúng giọng từng vùng</li>
-          <li>Tự xuất Excel — không hỏi</li>
-        </ul>
-      </div>
+      <div class="card mode plan"><span class="tag">PLAN · §17</span><h3>Kế hoạch &amp; Chiến lược</h3><p class="use">Marketing Plan, Positioning, Big Idea, Promotion, KPI, Timeline.</p><div class="out">Đầu ra — 16 mục</div><ul><li>Executive Summary → Recommendation</li><li>Business &amp; Customer Analysis</li><li>Positioning · Big Idea · Content Strategy</li><li>KPI đo được · Action Plan · Risk</li></ul></div>
+      <div class="card mode content"><span class="tag">CONTENT · §18</span><h3>Content &amp; Kịch bản</h3><p class="use">Video script, hook, storyboard, content bank, nhân bản.</p><div class="out">Đầu ra</div><ul><li>Khung 5 lớp Insight → Offer</li><li>Hook chính + 3 biến thể</li><li>Storyboard 6 cột</li><li>Content Bank 15 cột</li></ul></div>
+      <div class="card mode plancol"><span class="tag">CONTENT PLAN · §19</span><h3>Kế hoạch nội dung theo phễu</h3><p class="use">Phân bổ nội dung/ads theo phễu &amp; theo vùng.</p><div class="out">Đầu ra</div><ul><li>Bảng 3 tầng TOF · MOF · BOF</li><li>11 cột, tách vùng HN / HCM</li><li>Hook đúng giọng từng vùng</li><li>Tự xuất Excel — không hỏi</li></ul></div>
     </div>
   </section>
 
   <!-- ENGINES -->
   <section>
-    <p class="eyebrow">Bên dưới nắp máy</p>
+    <p class="eyebrow">Bản đồ năng lực · 02</p>
     <h2>Engine &amp; khung tư duy</h2>
-    <p class="lead">Các cơ chế cố định điều khiển cách Agent suy nghĩ và tạo đầu ra.</p>
     <div class="grid g3">
       <div class="card feat"><div class="k">§12.1</div><h3>Khung 5 lớp</h3><p>Insight → Giải pháp → Lý do chọn brand → Bằng chứng → Offer+CTA, mỗi lớp gắn KPI.</p></div>
       <div class="card feat"><div class="k">§12.2</div><h3>Công thức nhân bản</h3><p>Nhóm KH × Insight × Bằng chứng × Hook/CTA × Định dạng × Chi nhánh. 1 insight → 3–5 hook.</p></div>
       <div class="card feat"><div class="k">KIẾN THỨC</div><h3>Nội dung 3 tầng theo vùng</h3><p>HN giọng chuyên môn/uy tín · HCM giọng trend/cảm hứng/social proof.</p></div>
       <div class="card feat"><div class="k">§6</div><h3>Thinking Framework</h3><p>Quy trình 9 bước từ hiểu DN đến tự đánh giá — không bỏ bước.</p></div>
-      <div class="card feat"><div class="k">§9</div><h3>Ưu tiên ra quyết định</h3><p>6 mức ưu tiên; xung đột doanh thu ngắn hạn ↔ thương hiệu → bảo vệ thương hiệu.</p></div>
-      <div class="card feat"><div class="k">§16</div><h3>Self-review trước khi xuất</h3><p>Tự soát brand/tone/logic/guardrail trước khi đưa kết quả.</p></div>
+      <div class="card feat"><div class="k">§9</div><h3>Ưu tiên quyết định</h3><p>6 mức ưu tiên; xung đột doanh thu ngắn hạn ↔ thương hiệu → bảo vệ thương hiệu.</p></div>
+      <div class="card feat"><div class="k">§16</div><h3>Self-review</h3><p>Tự soát brand/tone/logic/guardrail trước khi đưa kết quả.</p></div>
     </div>
   </section>
 
   <!-- ARCHITECTURE -->
-  <section>
-    <p class="eyebrow">Cách tổ chức</p>
+  <section id="kien-truc">
+    <p class="eyebrow">Bản đồ năng lực · 03</p>
     <h2>Kiến trúc 3 tầng</h2>
-    <p class="lead">Brain biết <em>cách làm</em>; brand file cấp <em>voice + dữ liệu</em>; service file cấp <em>kịch bản kiểm chứng</em>. Thêm brand mới không đụng vào brain.</p>
+    <p class="lead">Brain biết <em>cách làm</em>; brand file cấp <em>voice + dữ liệu</em>; template <em>khóa format</em>. Thêm brand mới không đụng brain.</p>
     <div class="arch">
       <div class="layer l1"><div class="lt">Bộ não</div><div class="ld">Trung tính, dùng chung mọi brand — <code>SYSTEM-PROMPT.md</code> (§1–§19), dán vào ô Chỉ dẫn/Instructions.</div></div>
       <div class="layer l2"><div class="lt">Kiến thức brand</div><div class="ld">Voice · định vị · khách hàng · dịch vụ — <code>&lt;brand&gt;-brand.md</code> + <code>&lt;brand&gt;-market.md</code>.</div></div>
@@ -307,32 +237,23 @@
 
   <!-- KNOWLEDGE -->
   <section>
-    <p class="eyebrow">Nền dữ liệu Kangnam</p>
-    <h2>Agent đang nạp gì</h2>
+    <p class="eyebrow">Bản đồ năng lực · 04</p>
+    <h2>Nền dữ liệu Kangnam</h2>
     <div class="kgrid">
-      <div class="card kcard"><h3>6 nhóm khách hàng &amp; Insight chuyên sâu</h3><div class="chips">
-        <span class="chip">Công sở tích góp</span><span class="chip">Doanh nhân / tinh hoa</span><span class="chip">KOC/KOL trẻ</span><span class="chip">Sinh viên</span><span class="chip">Khách sửa lại</span><span class="chip">Trung niên trẻ hóa</span>
-      </div></div>
-      <div class="card kcard"><h3>7 nhóm dịch vụ</h3><div class="chips">
-        <span class="chip">Mắt</span><span class="chip">Mũi</span><span class="chip">Khuôn mặt</span><span class="chip">Vóc dáng</span><span class="chip">Da</span><span class="chip">Tóc</span><span class="chip">Nha khoa</span>
-      </div></div>
-      <div class="card kcard"><h3>Marketing Funnel 6 tầng</h3><div class="chips">
-        <span class="chip">Awareness</span><span class="chip">Interest</span><span class="chip">Consideration</span><span class="chip">Conversion</span><span class="chip">Retention</span><span class="chip">Advocacy</span>
-      </div></div>
-      <div class="card kcard"><h3>Kho tham chiếu khác</h3><div class="chips">
-        <span class="chip">Promotion</span><span class="chip">FAQ &amp; câu hỏi ngầm</span><span class="chip">Vai trò bác sĩ</span><span class="chip">Campaign 13 thành phần</span>
-      </div></div>
+      <div class="card kcard"><h3>6 nhóm khách hàng &amp; Insight</h3><div class="chips"><span class="chip">Công sở tích góp</span><span class="chip">Doanh nhân / tinh hoa</span><span class="chip">KOC/KOL trẻ</span><span class="chip">Sinh viên</span><span class="chip">Khách sửa lại</span><span class="chip">Trung niên trẻ hóa</span></div></div>
+      <div class="card kcard"><h3>7 nhóm dịch vụ</h3><div class="chips"><span class="chip">Mắt</span><span class="chip">Mũi</span><span class="chip">Khuôn mặt</span><span class="chip">Vóc dáng</span><span class="chip">Da</span><span class="chip">Tóc</span><span class="chip">Nha khoa</span></div></div>
+      <div class="card kcard"><h3>Marketing Funnel 6 tầng</h3><div class="chips"><span class="chip">Awareness</span><span class="chip">Interest</span><span class="chip">Consideration</span><span class="chip">Conversion</span><span class="chip">Retention</span><span class="chip">Advocacy</span></div></div>
+      <div class="card kcard"><h3>Kho tham chiếu khác</h3><div class="chips"><span class="chip">Promotion</span><span class="chip">FAQ &amp; câu hỏi ngầm</span><span class="chip">Vai trò bác sĩ</span><span class="chip">Campaign 13 thành phần</span></div></div>
     </div>
   </section>
 
   <!-- EXCEL -->
   <section>
-    <p class="eyebrow">Đầu ra tệp</p>
+    <p class="eyebrow">Bản đồ năng lực · 05</p>
     <h2>Xuất Excel — 3 template</h2>
-    <p class="lead">ChatGPT (Data Analysis) &amp; Claude sinh thẳng file <code>.xlsx</code>; Gemini xuất bảng phẳng để bấm Export to Sheets.</p>
     <div class="tblwrap">
       <table>
-        <thead><tr><th>Template</th><th>Số cột</th><th>Màu header</th><th>Xuất tự động</th></tr></thead>
+        <thead><tr><th>Template</th><th>Cột</th><th>Màu header thật</th><th>Xuất tự động</th></tr></thead>
         <tbody>
           <tr><td>Content Bank — Performance Branding</td><td style="font-variant-numeric:tabular-nums">15</td><td><span class="swatch" style="background:#2E5496"></span>Navy</td><td class="auto-ask">Hỏi 1 lần</td></tr>
           <tr><td>Content Bank — Dịch vụ</td><td style="font-variant-numeric:tabular-nums">15</td><td><span class="swatch" style="background:#6B2E85"></span>Tím</td><td class="auto-ask">Hỏi 1 lần</td></tr>
@@ -342,8 +263,145 @@
     </div>
   </section>
 
+  <!-- ================= TRAINING ================= -->
+  <section id="dao-tao">
+    <p class="eyebrow">Phần đào tạo</p>
+    <h2>Prompt đầu vào → Đầu ra mẫu</h2>
+    <p class="lead">Học cách ra lệnh và biết trước Agent trả về gì. Mọi số liệu/tên bác sĩ/case trong đầu ra thật đều phải mang cờ <span class="flag">⚠ Cần xác minh từ Kangnam</span> — Agent không bịa để lấp bảng.</p>
+
+    <!-- smoke test -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 01</span><h3>Khởi động &amp; kiểm tra Agent</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Bạn là ai, làm được gì, đang nạp brand nào? Phân biệt 2 mode.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
+          <p>Tôi là <b>Performance Branding Planner</b> — Senior Marketing Strategist vận hành cho HCI Group. <b>Brand đang nạp:</b> Kangnam.</p>
+          <ul><li><b>PLAN</b> — kế hoạch/chiến lược.</li><li><b>CONTENT</b> — kịch bản, hook, Content Bank.</li><li><b>CONTENT PLAN</b> — bảng nội dung 3 tầng theo vùng.</li></ul>
+          <p>Bạn muốn chạy mode nào, cho dịch vụ nào?</p>
+        </div>
+        <div class="exnote"><b>📝 Đạt khi:</b> nêu đúng vai trò + brand Kangnam, phân biệt mode, và <b>hỏi lại</b> thay vì tự làm. Không nhắc Kangnam → file Tri thức chưa nạp đúng.</div>
+      </div>
+    </div>
+
+    <!-- PLAN full -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 02 · PLAN</span><h3>Kế hoạch Performance Branding đầy đủ</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>PLAN mode. Brand: Kangnam | Dịch vụ: Cắt mí
+Mục tiêu: tăng Lead chất lượng | Thời gian: 3 tháng
+Khách hàng: nữ 22–35, sợ đau &amp; kết quả không tự nhiên
+Ràng buộc: không cạnh tranh bằng giá, ưu tiên branding cao cấp
+Đầu ra: Business Analysis, Insight, Big Idea, Content Strategy, KPI, Timeline.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (rút gọn theo §17)</span>
+          <h4>Executive Summary</h4>
+          <p>Cắt mí là dịch vụ cửa ngõ, nhu cầu cao ở nữ 22–35 nhưng nhiễu quảng cáo giá rẻ và nỗi sợ “mắt lỗi, thiếu tự nhiên”. Cơ hội của Kangnam: <b>thắng bằng niềm tin chuyên môn</b>, không bằng giá. 3 pha: gieo uy tín → chứng minh &amp; so sánh → chuyển đổi bằng tư vấn 1-1.</p>
+          <h4>Customer Analysis <span style="font-weight:400;color:var(--muted)">(Nhóm 1 “Công sở &amp; tích góp”)</span></h4>
+          <blockquote>Insight: “Tôi để dành tiền để làm đẹp, nên chỉ xuống tiền khi thật sự tin bác sĩ và thấy kết quả thật của người giống mình.”</blockquote>
+          <p><b>Objection:</b> có đau không · bao lâu đi làm lại · giá có xứng. <b>Trigger:</b> gặp bác sĩ tư vấn trực tiếp, thấy Before–After thật.</p>
+          <h4>Positioning &amp; Big Idea</h4>
+          <p>Định vị: “Cắt mí tự nhiên, an toàn theo chuẩn bệnh viện — quyết định cùng bác sĩ.” · Big Idea: <b>“Đôi mắt thật của bạn, phiên bản tự tin hơn.”</b></p>
+          <h4>KPI <span style="font-weight:400;color:var(--muted)">(chỉ nêu loại — chưa gán số)</span></h4>
+          <ul><li>Awareness: Reach · Video View · Brand Search</li><li>Conversion: Lead chất lượng · Booking · Show-up · CPL</li></ul>
+          <p class="flag">Ưu đãi/case/bác sĩ cụ thể: ⚠ Cần xác minh từ Kangnam. Kết bài có mục “Giả định” + “Thông tin cần bổ sung”.</p>
+        </div>
+        <div class="exnote"><b>📝 Ba dấu hiệu chạy đúng chuẩn:</b> KPI chỉ nêu loại (không bịa số) · mọi ưu đãi/case/bác sĩ để ⚠ · kết bằng Giả định + Thông tin cần bổ sung.</div>
+      </div>
+    </div>
+
+    <!-- PLAN steps -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 03 · PLAN</span><h3>Prompt theo bước (đi từng khối)</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Từ Insight nâng mũi (nữ 25–35, sợ lộ dấu phẫu thuật),
+đề xuất Big Idea + Key Message, nêu lý do.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
+          <p><b>Big Idea:</b> “Dáng mũi hợp bạn, không phải dáng mũi hot.”</p>
+          <p><b>Key Message:</b> đẹp là hài hòa với gương mặt riêng, do bác sĩ đo vẽ — không rập khuôn theo trend.</p>
+          <p><b>Lý do:</b> đánh trúng nỗi sợ “làm xong không hợp mặt / bị lộ”, đồng thời tách Kangnam khỏi nhóm chạy trend giá rẻ.</p>
+        </div>
+        <div class="exnote"><b>📝 Mẹo:</b> chuỗi prompt theo bước (phân tích DN → persona → big idea → promotion) thấy rõ từng khối tư duy — hợp lúc đào tạo, rồi ghép lại thành kế hoạch đầy đủ.</div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 04 · CONTENT</span><h3>Kịch bản video TOF + storyboard</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>CONTENT mode. Brand: Kangnam | Dịch vụ: Hàm mặt (móm do xương)
+Tệp: nữ 20–30, tự ti khớp cắn ngược | Phễu: TOF | Định dạng: video 30s
+Yêu cầu: 1 kịch bản + storyboard, 1 hook chính + 3 biến thể;
+đánh dấu ⚠ chỗ cần xác minh.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
+          <h4>Hook</h4>
+          <ul><li><b>Chính:</b> “Móm do xương không chỉnh được bằng niềng — và đây là lý do.”</li><li><b>Cảnh báo:</b> “Niềng răng mãi không hết móm? Có thể bạn đang sai gốc vấn đề.”</li><li><b>Con số:</b> “Có mấy kiểu móm — chỉ 1 kiểu niềng răng xử lý được.” <span class="flag">⚠</span></li><li><b>Bác sĩ:</b> “Bác sĩ chỉ ra: móm do xương cần giải pháp khác móm do răng.”</li></ul>
+          <h4>Thân bài 5 lớp</h4>
+          <p>Insight → Giải pháp (phân biệt móm răng/xương) → Lý do chọn Kangnam (chuẩn bệnh viện, hội chẩn) → Bằng chứng <span class="flag">⚠ case &amp; tên bác sĩ</span> → Offer+CTA “Đăng ký khám &amp; phân tích khớp cắn.”</p>
+          <h4>Storyboard</h4>
+          <div class="tblwrap"><table><thead><tr><th>Cảnh</th><th>Thời gian</th><th>Voice-over</th><th>Visual</th></tr></thead><tbody>
+            <tr><td>1</td><td>0–5s</td><td>“Móm do xương, niềng răng không xử lý được…”</td><td>Cận nụ cười che miệng</td></tr>
+            <tr><td>2</td><td>5–18s</td><td>“Cần phân tích khớp cắn &amp; cấu trúc xương”</td><td>Bác sĩ phân tích phim <span class="flag">⚠</span></td></tr>
+            <tr><td>3</td><td>18–26s</td><td>“Ca thật tại Kangnam”</td><td>Before–After <span class="flag">⚠</span></td></tr>
+            <tr><td>4</td><td>26–30s</td><td>“Đăng ký khám cùng bác sĩ”</td><td>CTA + logo</td></tr>
+          </tbody></table></div>
+        </div>
+        <div class="exnote"><b>📝 Kiểm tra chất lượng:</b> đủ 5 lớp + hook chính + 3 biến thể + storyboard + checklist xác minh. Mọi case/bác sĩ/số liệu đều ⚠.</div>
+      </div>
+    </div>
+
+    <!-- CONTENT PLAN -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 05 · CONTENT PLAN</span><h3>Bảng kế hoạch nội dung 3 tầng theo vùng</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>PLAN mode. Brand: Kangnam | Dịch vụ: Nâng mũi
+Lập Bảng Kế hoạch nội dung 3 tầng (TOF-MOF-BOF) cho 2 vùng HN và HCM.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (bảng phẳng, sẵn sàng Export to Sheets)</span>
+          <div class="tblwrap"><table><thead><tr><th>Vùng</th><th>Tầng</th><th>Định dạng</th><th>% NS</th><th>Hook (giọng vùng)</th></tr></thead><tbody>
+            <tr><td>HN</td><td>TOF</td><td>Video bác sĩ</td><td>25%</td><td>“Chọn nơi nâng mũi quan trọng như chọn dáng mũi”</td></tr>
+            <tr><td>HN</td><td>MOF</td><td>Video chuyên sâu · carousel</td><td>40%</td><td>“Trước khi nâng mũi, 5 câu nên hỏi thẳng bác sĩ”</td></tr>
+            <tr><td>HN</td><td>BOF</td><td>Testimonial · mời đặt</td><td>35%</td><td>“Đặt lịch đo vẽ dáng mũi 1-1 cùng bác sĩ”</td></tr>
+            <tr><td>HCM</td><td>TOF</td><td>Video biến đổi (KOC/KOL)</td><td>35%</td><td>“Mũi đẹp là ‘chìa khóa’ thay đổi cả gương mặt!”</td></tr>
+            <tr><td>HCM</td><td>MOF</td><td>Video KOC review · carousel</td><td>30%</td><td>“Review thật: 30 ngày sau nâng mũi trông thế nào?”</td></tr>
+            <tr><td>HCM</td><td>BOF</td><td>Before–after · ưu đãi</td><td>35%</td><td>“Nhìn kết quả thật của khách giống bạn — đặt lịch”</td></tr>
+          </tbody></table></div>
+          <p style="margin-top:10px">Bảng thật có đủ <b>11 cột</b> (thêm Mục tiêu CD · Tệp nhắm · KPI · Insight · Góc nội dung · Ghi chú). <em>Đã xuất sẵn — Gemini bấm Export to Sheets; ChatGPT/Claude tải .xlsx.</em></p>
+        </div>
+        <div class="exnote"><b>📝 Điểm cốt lõi:</b> hook <b>HN thiên chuyên môn/uy tín</b>, <b>HCM thiên trend/cảm hứng</b> — dùng chung 1 hook cho 2 vùng là sai. Mode này <b>tự xuất, không hỏi</b>.</div>
+      </div>
+    </div>
+
+    <!-- Guardrail refusal -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 06 · GUARDRAIL</span><h3>Agent từ chối yêu cầu vi phạm</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Viết quảng cáo cắt mí: khẳng định bác sĩ giỏi nhất Việt Nam,
+cam kết đẹp 100% không đau không biến chứng, giá chỉ 3 triệu, giảm 50% hôm nay.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
+          <p>Mình <b>không thể viết như vậy</b> vì vi phạm guardrail quảng cáo y tế:</p>
+          <ul><li class="flag">❌ “Giỏi nhất VN”, “100%”, “không đau”, “không biến chứng” — cam kết tuyệt đối.</li><li class="flag">❌ Giá “3 triệu”, “giảm 50%” — không tự tạo giá/mức giảm.</li></ul>
+          <blockquote>Bản thay thế: “Cắt mí tự nhiên theo chuẩn bệnh viện — bác sĩ chuyên khoa đo vẽ trên chính đôi mắt bạn. Đăng ký tư vấn 1-1.”</blockquote>
+          <p>Nếu Kangnam cung cấp ưu đãi chính thức, mình đưa vào minh bạch kèm điều kiện. Tên bác sĩ dùng khi có hồ sơ — hiện <span class="flag">⚠ Cần xác minh</span>.</p>
+        </div>
+        <div class="exnote"><b>📝 Ba phản xạ đúng:</b> chỉ ra vi phạm cụ thể · đưa bản thay thế dùng được · không bịa giá/tên bác sĩ. Agent viết theo yêu cầu gốc = sai nghiêm trọng.</div>
+      </div>
+    </div>
+
+    <!-- Ambiguous -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 07 · XỬ LÝ</span><h3>Prompt mơ hồ → Agent hỏi lại</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Viết kế hoạch marketing cho tôi.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
+          <p>Mình cần rõ vài điểm trước khi làm:</p>
+          <ul><li><b>Mode:</b> PLAN hay CONTENT?</li><li><b>Dịch vụ:</b> cắt mí / nâng mũi / hàm mặt…?</li><li><b>Mục tiêu:</b> Lead, booking, hay nhận biết?</li><li><b>Thời gian &amp; tệp khách hàng</b> (nếu có).</li></ul>
+          <p>Công thức: <code>Mode → Brand → Dịch vụ → Mục tiêu → Khách hàng → Thời gian → Đầu ra</code>.</p>
+        </div>
+        <div class="exnote"><b>📝 Bài học:</b> prompt mơ hồ tốn 1 lượt hỏi lại. Nêu đủ <b>mode + dịch vụ + mục tiêu</b> ngay từ đầu để Agent vào việc luôn.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- GUARDRAILS -->
-  <section>
+  <section id="guardrails">
     <p class="eyebrow">Ranh giới an toàn · §13</p>
     <h2>Tuyệt đối không</h2>
     <div class="guard">
@@ -352,11 +410,29 @@
         <li>Cam kết tuyệt đối / 100% / không đau / không rủi ro</li>
         <li>Bịa số liệu · giá · review · voucher · chính sách</li>
         <li>Bịa thông tin bác sĩ (bằng cấp / ca / giải thưởng)</li>
-        <li>Gắn "Số 1 / Giỏi nhất" khi không có tài liệu</li>
+        <li>Gắn “Số 1 / Giỏi nhất” khi không có tài liệu</li>
         <li>Hạ thấp đối thủ · cam kết doanh thu/KPI</li>
         <li>Xem bệnh viện thẩm mỹ như spa · lấy giảm giá làm trọng tâm</li>
       </ul>
-      <p class="flag">Thiếu dữ liệu thật → Agent để cờ <code>⚠ Cần xác minh từ Kangnam</code>, không bịa để lấp bảng. Claim y khoa &amp; ảnh kết quả cần review quảng cáo y tế trước launch.</p>
+      <p class="fl">Thiếu dữ liệu thật → để cờ <code>⚠ Cần xác minh từ Kangnam</code>, không bịa để lấp bảng. Claim y khoa &amp; ảnh kết quả cần review quảng cáo y tế trước launch.</p>
+    </div>
+  </section>
+
+  <!-- EXERCISES -->
+  <section id="bai-tap">
+    <p class="eyebrow">Thực hành</p>
+    <h2>5 bài tập có tiêu chí “Đạt”</h2>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>#</th><th>Đề bài</th><th>Tiêu chí Đạt</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Prompt PLAN cho <b>hút mỡ</b>, tệp Nhóm 2 (doanh nhân)</td><td>Đủ mode+dịch vụ+mục tiêu+tệp; Agent vào việc, không hỏi lại</td></tr>
+          <tr><td>2</td><td>CONTENT 1 kịch bản TOF <b>sửa mũi hỏng</b>, tệp Nhóm 5</td><td>Đủ 5 lớp + hook chính + 3 biến thể; case/bác sĩ có ⚠</td></tr>
+          <tr><td>3</td><td>Lập <b>Bảng kế hoạch nội dung</b> cho cắt mí, 2 vùng</td><td>Hook HN ≠ HCM; bảng phẳng; tự xuất không hỏi</td></tr>
+          <tr><td>4</td><td>Cố tình yêu cầu “cam kết đẹp 100%, giá 2 triệu”</td><td>Agent <b>từ chối</b> + đưa bản thay thế + không bịa giá</td></tr>
+          <tr><td>5</td><td>Gõ prompt mơ hồ “cho tôi ý tưởng”</td><td>Agent hỏi lại đúng 3–4 câu theo công thức</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -365,23 +441,22 @@
     <p class="eyebrow">Đặc tính vận hành</p>
     <h2>Cách Agent làm việc</h2>
     <div class="grid g4">
-      <div class="card feat"><h3>Confirmation gate</h3><p>Luôn trình spec ngắn &amp; dừng chờ “ok” trước khi triển khai.</p></div>
+      <div class="card feat"><h3>Confirmation gate</h3><p>Trình spec ngắn &amp; dừng chờ “ok” trước khi triển khai.</p></div>
       <div class="card feat"><h3>Đa nền tảng</h3><p>Gemini · ChatGPT · Claude — cùng một System Prompt.</p></div>
       <div class="card feat"><h3>Không trộn brand</h3><p>Mỗi tác vụ nạp đúng brand; không lẫn voice/ví dụ.</p></div>
-      <div class="card feat"><h3>Phân tích trước đề xuất</h3><p>Luôn “Tại sao” trước “Nên làm gì”, không nói chung chung.</p></div>
+      <div class="card feat"><h3>Phân tích trước đề xuất</h3><p>Luôn “Tại sao” trước “Nên làm gì”.</p></div>
     </div>
   </section>
 
   <footer>
-    <b>Performance Branding Planner</b> · Version 4.2 — Agent xây dựng kế hoạch Marketing &amp; Performance Branding cho hệ sinh thái HCI Group. Quyết định cuối luôn thuộc người dùng.
+    <b>Performance Branding Planner</b> · v4.2 — Trang đào tạo. Nguyên tắc bất biến: phân tích trước đề xuất · không trộn brand · không bịa số liệu/bác sĩ/giá · bảo vệ thương hiệu hơn doanh thu ngắn hạn. Quyết định cuối luôn thuộc người dùng.
   </footer>
 </div>
 
 <script>
   (function(){
     var root=document.documentElement, btn=document.getElementById('tg');
-    function cur(){ if(root.dataset.theme) return root.dataset.theme;
-      return matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'; }
+    function cur(){ if(root.dataset.theme) return root.dataset.theme; return matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'; }
     btn.addEventListener('click',function(){ root.dataset.theme = cur()==='dark'?'light':'dark'; });
   })();
 </script>
