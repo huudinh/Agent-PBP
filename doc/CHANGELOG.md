@@ -5,6 +5,10 @@
 
 ---
 
+## 2026-08-04 · Tài liệu đào tạo
+
+- Thêm [`doc/04-vi-du-dao-tao.md`](04-vi-du-dao-tao.md) — bộ ví dụ **prompt đầu vào → đầu ra mẫu** cho mọi năng lực (PLAN đầy đủ, prompt theo bước, CONTENT + storyboard, Content Bank, Content Plan, xuất Excel, guardrails, xử lý prompt mơ hồ) + 5 bài tập thực hành có tiêu chí Đạt. Mọi số liệu/bác sĩ/case trong ví dụ đều mang cờ `⚠ Cần xác minh`.
+
 ## 2026-08-04 · Trang tổng quan chức năng
 
 - Thêm [`doc/tong-quan.html`](tong-quan.html) — trang tổng quan trực quan (self-contained, sáng/tối tự động): 3 chế độ, engine tư duy, kiến trúc 3 tầng, nền kiến thức, xuất Excel, guardrails, vận hành. Màu phân loại trùng đúng hệ màu 3 template Excel.

@@ -41,6 +41,7 @@ Bạn là ai, làm được gì, đang nạp brand nào? Phân biệt 2 mode.
 | [doc/01-cai-dat.md](doc/01-cai-dat.md) | Cài đặt Gemini/ChatGPT/Claude · chiến lược file · upload template · thêm brand/dịch vụ · xử lý sự cố |
 | [doc/02-cau-lenh.md](doc/02-cau-lenh.md) | 2 mode · công thức ra lệnh · prompt ví dụ |
 | [doc/03-output-mau.md](doc/03-output-mau.md) | Output mẫu (Content Bank, Kế hoạch nội dung) · hành vi xuất Excel |
+| [doc/04-vi-du-dao-tao.md](doc/04-vi-du-dao-tao.md) | 📚 Tài liệu đào tạo — prompt đầu vào → đầu ra mẫu cho mọi năng lực |
 | [doc/CHANGELOG.md](doc/CHANGELOG.md) | Lịch sử cập nhật |
 
 ---
