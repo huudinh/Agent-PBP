@@ -56,7 +56,10 @@
   .nav .wrap::-webkit-scrollbar{display:none}
   .nav a{font-size:.83rem; color:var(--muted); text-decoration:none; padding:6px 11px; border-radius:8px; white-space:nowrap; font-weight:600}
   .nav a:hover{color:var(--ink); background:var(--surface-2)}
-  .nav .nb{margin-right:auto; font-weight:750; color:var(--ink); font-size:.9rem; letter-spacing:-.01em}
+  .nav .nb{margin-right:auto; display:flex; flex-direction:column; justify-content:center; line-height:1.15; min-width:0}
+  .nav .nb b{font-weight:750; color:var(--ink); font-size:.86rem; letter-spacing:-.01em; white-space:nowrap}
+  .nav .nb span{font-size:.66rem; color:var(--muted); white-space:nowrap}
+  @media(max-width:720px){.nav .nb span{display:none}}
   .theme-btn{font:inherit; font-size:.8rem; cursor:pointer; color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 12px; white-space:nowrap}
   .theme-btn:hover{color:var(--ink)}
 
@@ -151,7 +154,7 @@
 
 <nav class="nav">
   <div class="wrap">
-    <span class="nb">◆ PBP · Đào tạo</span>
+    <div class="nb"><b>Performance Branding Planner</b><span>Trang đào tạo · Agent Marketing &amp; Performance Branding · HCI Group · v4.2</span></div>
     <a href="#tong-quan">Tổng quan</a>
     <a href="#che-do">3 Chế độ</a>
     <a href="#kien-truc">Kiến trúc</a>
