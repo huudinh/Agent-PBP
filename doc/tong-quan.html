@@ -4,9 +4,9 @@
   :root{
     --paper:#F7F1E7; --surface:#FFFCF6; --surface-2:#F1E8DA;
     --ink:#2A2019; --muted:#7C6E5E; --faint:#A6947F; --line:#E6DAC8;
-    --navy:#A94A34; --navy-tint:#F3E2DA;      /* PLAN — đất nung */
-    --purple:#97701C; --purple-tint:#F3E8CD;  /* CONTENT — hoàng thổ */
-    --teal:#5E6B33; --teal-tint:#E8EAD1;       /* CONTENT PLAN — ô-liu ấm */
+    --navy:#A94A34; --navy-tint:#F3E2DA;
+    --purple:#97701C; --purple-tint:#F3E8CD;
+    --teal:#5E6B33; --teal-tint:#E8EAD1;
     --warn:#A8442A; --warn-tint:#F4E1D6;
     --term:#241C14; --term-ink:#EFE4D2;
     --accent:var(--navy);
@@ -43,11 +43,7 @@
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
-    font-size:16px; line-height:1.55; letter-spacing:-.005em; -webkit-font-smoothing:antialiased;
-  }
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI Variable","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif; font-size:16px; line-height:1.55; letter-spacing:-.005em; -webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px; margin:0 auto; padding:0 24px}
   section{padding:clamp(34px,5vw,54px) 0; border-top:1px solid var(--line); scroll-margin-top:64px}
   h2{font-size:clamp(1.15rem,2.4vw,1.55rem); margin:0 0 6px; letter-spacing:-.02em; text-wrap:balance}
@@ -55,7 +51,6 @@
   .eyebrow{font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin:0 0 12px}
   code{font-family:ui-monospace,"Cascadia Code",Consolas,monospace; background:var(--surface-2); padding:1px 6px; border-radius:5px; font-size:.85em}
 
-  /* ---- sticky nav ---- */
   .nav{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--paper) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
   .nav .wrap{display:flex; align-items:center; gap:8px; height:52px; overflow-x:auto; scrollbar-width:none}
   .nav .wrap::-webkit-scrollbar{display:none}
@@ -65,7 +60,6 @@
   .theme-btn{font:inherit; font-size:.8rem; cursor:pointer; color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:5px 12px; white-space:nowrap}
   .theme-btn:hover{color:var(--ink)}
 
-  /* ---- header ---- */
   header{padding:clamp(28px,5vw,44px) 0 4px}
   .brand{display:flex; align-items:center; gap:12px}
   .mark{width:42px; height:42px; border-radius:12px; flex:none; background:linear-gradient(140deg,var(--navy),var(--purple) 55%,var(--teal)); display:grid; place-items:center; color:#fff; font-size:20px; box-shadow:var(--shadow)}
@@ -123,24 +117,25 @@
   .swatch{display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:7px; vertical-align:middle; border:1px solid rgba(0,0,0,.15)}
   .auto-yes{color:var(--teal); font-weight:650} .auto-ask{color:var(--muted)}
 
-  /* ---- training example ---- */
   .ex{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; margin-bottom:18px}
   .ex>.exhd{padding:15px 20px; border-bottom:1px solid var(--line); display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
-  .ex>.exhd .id{font-size:.72rem; font-weight:800; letter-spacing:.06em; color:var(--accent); font-variant-numeric:tabular-nums}
+  .ex>.exhd .id{font-size:.72rem; font-weight:800; letter-spacing:.06em; color:var(--accent); font-variant-numeric:tabular-nums; white-space:nowrap}
   .ex>.exhd h3{margin:0; font-size:1rem; letter-spacing:-.01em}
   .ex .body{padding:18px 20px; display:flex; flex-direction:column; gap:14px}
+  .subhd{font-size:.7rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin:4px 0 -4px}
   .prompt{background:var(--term); color:var(--term-ink); border-radius:10px; padding:13px 15px 14px; font-family:ui-monospace,"Cascadia Code",Consolas,monospace; font-size:.82rem; line-height:1.5; white-space:pre-wrap; overflow-x:auto}
   .prompt .lbl{display:block; font-size:.66rem; font-weight:700; letter-spacing:.12em; color:#D9A88C; margin-bottom:8px; text-transform:uppercase}
   .output{background:var(--surface-2); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; padding:14px 18px}
   .output>.lbl{display:block; font-size:.66rem; font-weight:700; letter-spacing:.12em; color:var(--muted); margin-bottom:10px; text-transform:uppercase}
   .output p{margin:.4em 0} .output ul{margin:.4em 0; padding-left:20px} .output li{margin:.25em 0; font-size:.9rem}
-  .output h4{margin:.7em 0 .2em; font-size:.9rem}
-  .output blockquote{margin:.5em 0; padding:8px 14px; border-left:3px solid var(--faint); background:var(--surface); border-radius:0 8px 8px 0; font-style:italic; color:var(--ink)}
-  .output .tblwrap{box-shadow:none}
-  .output table{min-width:480px} .output th,.output td{padding:8px 12px; font-size:.8rem}
+  .output h4{margin:.9em 0 .2em; font-size:.88rem; color:var(--accent); letter-spacing:-.01em}
+  .output h4:first-child{margin-top:0}
+  .output blockquote{margin:.5em 0; padding:8px 14px; border-left:3px solid var(--faint); background:var(--surface); border-radius:0 8px 8px 0; font-style:italic}
+  .output .tblwrap{box-shadow:none; margin:.5em 0}
+  .output table{min-width:460px} .output th,.output td{padding:8px 12px; font-size:.8rem}
   .flag{color:var(--warn); font-weight:650}
-  .exnote{background:var(--navy-tint); border-radius:8px; padding:11px 14px; font-size:.85rem; color:var(--ink)}
-  .exnote b{color:var(--accent)}
+  .exnote{background:var(--navy-tint); border-radius:8px; padding:11px 14px; font-size:.85rem} .exnote b{color:var(--accent)}
+  .divi{height:1px; background:var(--line); margin:2px 0}
 
   .guard{background:var(--warn-tint); border:1px solid color-mix(in srgb,var(--warn) 30%,transparent); border-left:4px solid var(--warn); border-radius:12px; padding:20px 22px}
   .guard h3{margin:0 0 10px; font-size:.98rem; color:var(--warn); display:flex; gap:8px}
@@ -177,15 +172,9 @@
 
   <div class="hero rise">
     <h1>Một trang để <em>hiểu</em> và <em>vận hành</em> đúng Agent Performance Branding Planner.</h1>
-    <p>Nửa trên: bản đồ năng lực. Nửa dưới: từng năng lực kèm <b>prompt đầu vào → đầu ra mẫu</b> và bài tập. Đủ để một người mới ra lệnh đúng ngay từ ngày đầu.</p>
+    <p>Nửa trên: bản đồ năng lực. Nửa dưới: từng năng lực kèm <b>prompt đầu vào → đầu ra mẫu</b> đầy đủ và bài tập. Đủ để một người mới ra lệnh đúng ngay từ ngày đầu.</p>
     <div class="pipe" aria-label="Quy trình tư duy">
-      <span class="step">Phân tích DN</span><span class="arw">→</span>
-      <span class="step">Khách hàng</span><span class="arw">→</span>
-      <span class="step">Mục tiêu</span><span class="arw">→</span>
-      <span class="step">Chiến lược</span><span class="arw">→</span>
-      <span class="step">Kế hoạch</span><span class="arw">→</span>
-      <span class="step">KPI</span><span class="arw">→</span>
-      <span class="step">Timeline</span>
+      <span class="step">Phân tích DN</span><span class="arw">→</span><span class="step">Khách hàng</span><span class="arw">→</span><span class="step">Mục tiêu</span><span class="arw">→</span><span class="step">Chiến lược</span><span class="arw">→</span><span class="step">Kế hoạch</span><span class="arw">→</span><span class="step">KPI</span><span class="arw">→</span><span class="step">Timeline</span>
     </div>
     <div class="stats">
       <div class="stat"><div class="n">3</div><div class="l">Chế độ đầu ra</div></div>
@@ -197,7 +186,6 @@
     </div>
   </div>
 
-  <!-- MODES -->
   <section id="che-do">
     <p class="eyebrow">Bản đồ năng lực · 01</p>
     <h2>Ba chế độ đầu ra</h2>
@@ -209,7 +197,6 @@
     </div>
   </section>
 
-  <!-- ENGINES -->
   <section>
     <p class="eyebrow">Bản đồ năng lực · 02</p>
     <h2>Engine &amp; khung tư duy</h2>
@@ -223,7 +210,6 @@
     </div>
   </section>
 
-  <!-- ARCHITECTURE -->
   <section id="kien-truc">
     <p class="eyebrow">Bản đồ năng lực · 03</p>
     <h2>Kiến trúc 3 tầng</h2>
@@ -235,7 +221,6 @@
     </div>
   </section>
 
-  <!-- KNOWLEDGE -->
   <section>
     <p class="eyebrow">Bản đồ năng lực · 04</p>
     <h2>Nền dữ liệu Kangnam</h2>
@@ -247,7 +232,6 @@
     </div>
   </section>
 
-  <!-- EXCEL -->
   <section>
     <p class="eyebrow">Bản đồ năng lực · 05</p>
     <h2>Xuất Excel — 3 template</h2>
@@ -263,137 +247,266 @@
     </div>
   </section>
 
-  <!-- ================= TRAINING ================= -->
+  <!-- ================= TRAINING (đầy đủ) ================= -->
   <section id="dao-tao">
     <p class="eyebrow">Phần đào tạo</p>
-    <h2>Prompt đầu vào → Đầu ra mẫu</h2>
-    <p class="lead">Học cách ra lệnh và biết trước Agent trả về gì. Mọi số liệu/tên bác sĩ/case trong đầu ra thật đều phải mang cờ <span class="flag">⚠ Cần xác minh từ Kangnam</span> — Agent không bịa để lấp bảng.</p>
+    <h2>Prompt đầu vào → Đầu ra mẫu (đầy đủ)</h2>
+    <p class="lead">Ký hiệu: <b>⌨️ Prompt</b> = câu bạn gõ · <b>🖥️ Đầu ra</b> = kết quả Agent trả về · <b>📝</b> = ghi chú đào tạo. Mọi số liệu/tên bác sĩ/case trong đầu ra thật đều mang cờ <span class="flag">⚠ Cần xác minh từ Kangnam</span> — Agent không bịa để lấp bảng.</p>
 
-    <!-- smoke test -->
+    <!-- Nguyên tắc -->
+    <div class="card" style="margin-bottom:18px">
+      <h3 style="margin:0 0 10px; font-size:1rem">Nguyên tắc ra lệnh chung</h3>
+      <p style="margin:.2em 0; font-size:.9rem"><b>Công thức:</b> <code>Mode → Brand → Dịch vụ → Mục tiêu → Khách hàng → Dữ liệu/Website → Thời gian → Đầu ra → Ràng buộc</code></p>
+      <div class="tblwrap" style="margin:12px 0 8px">
+        <table><thead><tr><th>Mode</th><th>Gõ khi cần</th><th>Template</th></tr></thead><tbody>
+          <tr><td><b>PLAN</b></td><td>Kế hoạch, chiến lược, định vị, KPI, timeline</td><td>§17</td></tr>
+          <tr><td><b>CONTENT</b></td><td>Kịch bản video, hook, storyboard, content bank</td><td>§18</td></tr>
+          <tr><td><b>CONTENT PLAN</b></td><td>Phân bổ nội dung/ads theo phễu &amp; vùng</td><td>§19</td></tr>
+        </tbody></table>
+      </div>
+      <p style="margin:.2em 0; font-size:.86rem; color:var(--muted)"><b>Luật vàng:</b> nêu rõ mục tiêu + tệp khách hàng → đầu ra sắc · Agent luôn trình spec ngắn &amp; dừng chờ “ok” · mạch luôn Phân tích → Kết luận → Đề xuất, “Tại sao” trước “Nên làm gì”.</p>
+    </div>
+
+    <!-- VD01 smoke -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 01</span><h3>Khởi động &amp; kiểm tra Agent</h3></div>
+      <div class="exhd"><span class="id">VD 01 · KHỞI ĐỘNG</span><h3>Kiểm tra Agent đã nạp đúng</h3></div>
       <div class="body">
         <div class="prompt"><span class="lbl">⌨️ Prompt</span>Bạn là ai, làm được gì, đang nạp brand nào? Phân biệt 2 mode.</div>
         <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
-          <p>Tôi là <b>Performance Branding Planner</b> — Senior Marketing Strategist vận hành cho HCI Group. <b>Brand đang nạp:</b> Kangnam.</p>
-          <ul><li><b>PLAN</b> — kế hoạch/chiến lược.</li><li><b>CONTENT</b> — kịch bản, hook, Content Bank.</li><li><b>CONTENT PLAN</b> — bảng nội dung 3 tầng theo vùng.</li></ul>
+          <p>Tôi là <b>Performance Branding Planner</b> — Senior Marketing Strategist vận hành cho HCI Group. <b>Brand đang nạp:</b> Kangnam (bệnh viện thẩm mỹ).</p>
+          <ul><li><b>PLAN</b> — kế hoạch/chiến lược: Business Analysis, Insight, Big Idea, Content Strategy, KPI, Timeline.</li><li><b>CONTENT</b> — sản xuất: kịch bản, hook, storyboard, Content Bank theo khung 5 lớp.</li><li><b>CONTENT PLAN</b> — bảng nội dung 3 tầng TOF–MOF–BOF theo vùng.</li></ul>
           <p>Bạn muốn chạy mode nào, cho dịch vụ nào?</p>
         </div>
         <div class="exnote"><b>📝 Đạt khi:</b> nêu đúng vai trò + brand Kangnam, phân biệt mode, và <b>hỏi lại</b> thay vì tự làm. Không nhắc Kangnam → file Tri thức chưa nạp đúng.</div>
       </div>
     </div>
 
-    <!-- PLAN full -->
+    <!-- VD02 PLAN full -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 02 · PLAN</span><h3>Kế hoạch Performance Branding đầy đủ</h3></div>
+      <div class="exhd"><span class="id">VD 02 · PLAN</span><h3>Kế hoạch Performance Branding đầy đủ (§17)</h3></div>
       <div class="body">
         <div class="prompt"><span class="lbl">⌨️ Prompt</span>PLAN mode. Brand: Kangnam | Dịch vụ: Cắt mí
 Mục tiêu: tăng Lead chất lượng | Thời gian: 3 tháng
 Khách hàng: nữ 22–35, sợ đau &amp; kết quả không tự nhiên
 Ràng buộc: không cạnh tranh bằng giá, ưu tiên branding cao cấp
 Đầu ra: Business Analysis, Insight, Big Idea, Content Strategy, KPI, Timeline.</div>
-        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (rút gọn theo §17)</span>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (theo PLAN TEMPLATE §17)</span>
           <h4>Executive Summary</h4>
-          <p>Cắt mí là dịch vụ cửa ngõ, nhu cầu cao ở nữ 22–35 nhưng nhiễu quảng cáo giá rẻ và nỗi sợ “mắt lỗi, thiếu tự nhiên”. Cơ hội của Kangnam: <b>thắng bằng niềm tin chuyên môn</b>, không bằng giá. 3 pha: gieo uy tín → chứng minh &amp; so sánh → chuyển đổi bằng tư vấn 1-1.</p>
+          <p>Cắt mí là dịch vụ cửa ngõ, nhu cầu cao ở nữ 22–35 nhưng nhiễu quảng cáo giá rẻ và nỗi sợ “mắt lỗi, thiếu tự nhiên”. Cơ hội của Kangnam là <b>thắng bằng niềm tin chuyên môn</b>, không bằng giá. Kế hoạch 3 tháng: gieo uy tín (T1) → chứng minh &amp; so sánh (T2) → chuyển đổi bằng tư vấn 1-1 (T3).</p>
+          <h4>Business Analysis</h4>
+          <div class="tblwrap"><table><thead><tr><th>USP</th><th>Ý nghĩa</th></tr></thead><tbody>
+            <tr><td>Chuẩn bệnh viện thẩm mỹ</td><td>An toàn, có chuyên khoa — khác spa/TMV</td></tr>
+            <tr><td>Bác sĩ tư vấn trực tiếp</td><td>Tạo niềm tin trước khi quyết định</td></tr>
+            <tr><td>Quy trình &amp; bảo hành minh bạch</td><td>Giảm rào cản “sợ biến chứng”</td></tr>
+          </tbody></table></div>
+          <ul><li><b>Điểm mạnh:</b> thương hiệu lớn, hệ thống chi nhánh, đội ngũ bác sĩ.</li><li><b>Điểm yếu:</b> định kiến “giá cao”; case/bác sĩ theo dịch vụ <span class="flag">⚠</span>.</li><li><b>Cơ hội:</b> nhóm nữ văn phòng cân nhắc kỹ, coi trọng an toàn.</li><li><b>Thách thức:</b> thị trường nhiễu giá rẻ, review ảo.</li></ul>
           <h4>Customer Analysis <span style="font-weight:400;color:var(--muted)">(Nhóm 1 “Công sở &amp; tích góp”)</span></h4>
+          <div class="tblwrap"><table><thead><tr><th>Thuộc tính</th><th>Mô tả</th></tr></thead><tbody>
+            <tr><td>Độ tuổi / Giới</td><td>Nữ 22–35</td></tr>
+            <tr><td>Nghề nghiệp</td><td>Văn phòng, kinh doanh nhỏ</td></tr>
+            <tr><td>Khu vực</td><td>Thành phố có chi nhánh Kangnam</td></tr>
+          </tbody></table></div>
           <blockquote>Insight: “Tôi để dành tiền để làm đẹp, nên chỉ xuống tiền khi thật sự tin bác sĩ và thấy kết quả thật của người giống mình.”</blockquote>
-          <p><b>Objection:</b> có đau không · bao lâu đi làm lại · giá có xứng. <b>Trigger:</b> gặp bác sĩ tư vấn trực tiếp, thấy Before–After thật.</p>
-          <h4>Positioning &amp; Big Idea</h4>
-          <p>Định vị: “Cắt mí tự nhiên, an toàn theo chuẩn bệnh viện — quyết định cùng bác sĩ.” · Big Idea: <b>“Đôi mắt thật của bạn, phiên bản tự tin hơn.”</b></p>
-          <h4>KPI <span style="font-weight:400;color:var(--muted)">(chỉ nêu loại — chưa gán số)</span></h4>
-          <ul><li>Awareness: Reach · Video View · Brand Search</li><li>Conversion: Lead chất lượng · Booking · Show-up · CPL</li></ul>
-          <p class="flag">Ưu đãi/case/bác sĩ cụ thể: ⚠ Cần xác minh từ Kangnam. Kết bài có mục “Giả định” + “Thông tin cần bổ sung”.</p>
+          <p><b>Pain:</b> sợ đau, sợ mắt lỗi/thiếu tự nhiên, sợ chọn nhầm nơi. <b>Objection:</b> có đau không · bao lâu đi làm lại · giá có xứng. <b>Decision Trigger:</b> gặp bác sĩ tư vấn trực tiếp, thấy Before–After thật.</p>
+          <h4>Marketing Objective</h4>
+          <p>Business: tăng booking cắt mí chất lượng · Marketing: tăng Lead chất lượng (không chạy Lead rẻ) · Communication: định vị “cắt mí an toàn, tự nhiên, do bác sĩ chuyên khoa”.</p>
+          <h4>Positioning · Big Idea</h4>
+          <p>Định vị: “Cắt mí tự nhiên, an toàn theo chuẩn bệnh viện — quyết định cùng bác sĩ, không theo quảng cáo.”</p>
+          <p>Big Idea: <b>“Đôi mắt thật của bạn, phiên bản tự tin hơn.”</b> · Key Message: đẹp tự nhiên = hiểu đúng cấu trúc mắt + bác sĩ chuyên khoa, không rập khuôn.</p>
+          <h4>Content Strategy</h4>
+          <div class="tblwrap"><table><thead><tr><th>Pillar</th><th>Mục tiêu</th><th>Loại nội dung</th></tr></thead><tbody>
+            <tr><td>Kiến thức</td><td>Giáo dục cắt mí an toàn</td><td>Video bác sĩ, checklist</td></tr>
+            <tr><td>Bằng chứng</td><td>Tạo niềm tin</td><td>Before–After thật <span class="flag">⚠</span>, review khách</td></tr>
+            <tr><td>Chuyên môn</td><td>Khẳng định năng lực</td><td>Bác sĩ phân tích ca</td></tr>
+            <tr><td>FAQ</td><td>Gỡ rào cản</td><td>“Có đau không / bao lâu hồi phục”</td></tr>
+          </tbody></table></div>
+          <h4>Promotion <span style="font-weight:400;color:var(--muted)">(ưu tiên giá trị, không giảm sâu)</span></h4>
+          <p>Miễn phí đo vẽ &amp; tư vấn 1-1 với bác sĩ · bộ chăm sóc hậu phẫu · tái khám miễn phí. <span class="flag">Mức ưu đãi cụ thể ⚠ Cần xác minh từ Kangnam.</span></p>
+          <h4>KPI <span style="font-weight:400;color:var(--muted)">(đề xuất loại — chưa gán số)</span></h4>
+          <ul><li>Awareness: Reach · Video View · Brand Search</li><li>Consideration: CTR · Time on Page · lượt inbox</li><li>Conversion: Lead chất lượng · Booking · Show-up · CPL</li></ul>
+          <h4>Action Plan · Timeline</h4>
+          <div class="tblwrap"><table><thead><tr><th>Giai đoạn</th><th>Công việc</th><th>Phụ trách</th><th>Kết quả</th></tr></thead><tbody>
+            <tr><td>Tháng 1</td><td>Chuỗi video bác sĩ + kiến thức an toàn</td><td>Content + Media</td><td>Gom tệp warm</td></tr>
+            <tr><td>Tháng 2</td><td>So sánh chuyên sâu + Before–After</td><td>Content + Ads</td><td>Tăng cân nhắc</td></tr>
+            <tr><td>Tháng 3</td><td>Testimonial + mời tư vấn 1-1</td><td>Sales + Ads</td><td>Booking</td></tr>
+          </tbody></table></div>
+          <h4>Risk · Recommendation</h4>
+          <p><b>Risk:</b> review ảo đối thủ (Trung bình → nhấn minh chứng thật); CPL tăng cuối kỳ (→ retarget, ABO). <b>Recommendation:</b> Cao cho chuỗi bác sĩ + Before–After; Trung bình cho promotion; Thấp cho chạy trend.</p>
+          <h4>Giả định · Thông tin cần bổ sung</h4>
+          <p><b>Giả định:</b> phân bổ pha theo kinh nghiệm ngành; chưa có dữ liệu CPL lịch sử. <b>Cần bổ sung:</b> ngân sách/tháng · CPL cũ · danh sách bác sĩ cắt mí · kho case được phép dùng.</p>
         </div>
         <div class="exnote"><b>📝 Ba dấu hiệu chạy đúng chuẩn:</b> KPI chỉ nêu loại (không bịa số) · mọi ưu đãi/case/bác sĩ để ⚠ · kết bằng Giả định + Thông tin cần bổ sung.</div>
       </div>
     </div>
 
-    <!-- PLAN steps -->
+    <!-- VD03 steps -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 03 · PLAN</span><h3>Prompt theo bước (đi từng khối)</h3></div>
+      <div class="exhd"><span class="id">VD 03 · PLAN</span><h3>Prompt theo bước — đi từng khối tư duy</h3></div>
       <div class="body">
-        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Từ Insight nâng mũi (nữ 25–35, sợ lộ dấu phẫu thuật),
-đề xuất Big Idea + Key Message, nêu lý do.</div>
-        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
-          <p><b>Big Idea:</b> “Dáng mũi hợp bạn, không phải dáng mũi hot.”</p>
-          <p><b>Key Message:</b> đẹp là hài hòa với gương mặt riêng, do bác sĩ đo vẽ — không rập khuôn theo trend.</p>
-          <p><b>Lý do:</b> đánh trúng nỗi sợ “làm xong không hợp mặt / bị lộ”, đồng thời tách Kangnam khỏi nhóm chạy trend giá rẻ.</p>
+        <p class="subhd">a · Phân tích doanh nghiệp</p>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Phân tích doanh nghiệp cho dịch vụ nâng mũi Kangnam
+(mạnh/yếu/USP/cơ hội/thách thức), chưa đề xuất.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra</span>
+          <p><b>USP:</b> cấu trúc/sụn tự thân theo chỉ định bác sĩ; chuẩn bệnh viện; bảo hành minh bạch. <b>Mạnh:</b> thương hiệu, đội ngũ, chi nhánh. <b>Yếu:</b> định kiến giá cao; hồ sơ bác sĩ nâng mũi <span class="flag">⚠</span>. <b>Cơ hội:</b> nhu cầu sửa mũi hỏng tăng (Nhóm 5). <b>Thách thức:</b> quảng cáo “giá rẻ”, khách sợ biến chứng. <em>(Chưa đề xuất theo yêu cầu.)</em></p>
         </div>
-        <div class="exnote"><b>📝 Mẹo:</b> chuỗi prompt theo bước (phân tích DN → persona → big idea → promotion) thấy rõ từng khối tư duy — hợp lúc đào tạo, rồi ghép lại thành kế hoạch đầy đủ.</div>
+        <div class="divi"></div>
+        <p class="subhd">b · Xây persona</p>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Xây persona nâng mũi: Pain/Need/Insight/Objection/Decision Trigger, giải thích ngắn.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra</span>
+          <p><b>Persona:</b> nữ 25–35, văn phòng, thu nhập khá (Nhóm 1). <b>Pain:</b> sợ mũi lộ sóng/không hợp mặt, sợ đau, sợ bị nhận ra. <b>Need:</b> dáng mũi tự nhiên hợp gương mặt, an toàn. <b>Insight:</b> “Tôi muốn đẹp hơn nhưng vẫn phải là tôi.” <b>Objection:</b> có bị lộ không · bao lâu ổn định · bảo hành. <b>Trigger:</b> bác sĩ đo vẽ trực tiếp trên gương mặt mình.</p>
+        </div>
+        <div class="divi"></div>
+        <p class="subhd">c · Big Idea từ Insight</p>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Từ Insight trên, đề xuất Big Idea + Key Message, nêu lý do.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra</span>
+          <p><b>Big Idea:</b> “Dáng mũi hợp bạn, không phải dáng mũi hot.” <b>Key Message:</b> đẹp là hài hòa với gương mặt riêng, do bác sĩ đo vẽ. <b>Lý do:</b> đánh trúng nỗi sợ “làm xong không hợp mặt”, tách Kangnam khỏi nhóm chạy trend giá rẻ.</p>
+        </div>
+        <div class="divi"></div>
+        <p class="subhd">d · Promotion đúng triết lý brand</p>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Đề xuất Promotion cho nâng mũi, ưu tiên quà/combo/membership hơn giảm giá.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra</span>
+          <ul><li>1. Giá trị: miễn phí đo vẽ + mô phỏng dáng mũi 1-1 với bác sĩ.</li><li>2. Quà: bộ chăm sóc hậu phẫu + gói tái khám.</li><li>3. Combo/Membership: chăm sóc da hậu phẫu định kỳ.</li><li>4. Trả góp thay vì giảm sâu.</li></ul>
+          <p class="flag">Điều kiện &amp; mức cụ thể ⚠ Cần xác nhận từ Kangnam. Không dùng flash sale/giảm sâu — trái triết lý thương hiệu.</p>
+        </div>
+        <div class="exnote"><b>📝 Mẹo:</b> prompt theo bước thấy rõ từng khối tư duy — hợp lúc đào tạo, rồi ghép lại thành kế hoạch đầy đủ như VD 02.</div>
       </div>
     </div>
 
-    <!-- CONTENT -->
+    <!-- VD04 CONTENT full -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 04 · CONTENT</span><h3>Kịch bản video TOF + storyboard</h3></div>
+      <div class="exhd"><span class="id">VD 04 · CONTENT</span><h3>Kịch bản video TOF + storyboard (đầy đủ)</h3></div>
       <div class="body">
         <div class="prompt"><span class="lbl">⌨️ Prompt</span>CONTENT mode. Brand: Kangnam | Dịch vụ: Hàm mặt (móm do xương)
 Tệp: nữ 20–30, tự ti khớp cắn ngược | Phễu: TOF | Định dạng: video 30s
 Yêu cầu: 1 kịch bản + storyboard, 1 hook chính + 3 biến thể;
-đánh dấu ⚠ chỗ cần xác minh.</div>
+đánh dấu ⚠ chỗ cần xác minh (tên bác sĩ, case, số liệu).</div>
         <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
-          <h4>Hook</h4>
-          <ul><li><b>Chính:</b> “Móm do xương không chỉnh được bằng niềng — và đây là lý do.”</li><li><b>Cảnh báo:</b> “Niềng răng mãi không hết móm? Có thể bạn đang sai gốc vấn đề.”</li><li><b>Con số:</b> “Có mấy kiểu móm — chỉ 1 kiểu niềng răng xử lý được.” <span class="flag">⚠</span></li><li><b>Bác sĩ:</b> “Bác sĩ chỉ ra: móm do xương cần giải pháp khác móm do răng.”</li></ul>
-          <h4>Thân bài 5 lớp</h4>
-          <p>Insight → Giải pháp (phân biệt móm răng/xương) → Lý do chọn Kangnam (chuẩn bệnh viện, hội chẩn) → Bằng chứng <span class="flag">⚠ case &amp; tên bác sĩ</span> → Offer+CTA “Đăng ký khám &amp; phân tích khớp cắn.”</p>
-          <h4>Storyboard</h4>
-          <div class="tblwrap"><table><thead><tr><th>Cảnh</th><th>Thời gian</th><th>Voice-over</th><th>Visual</th></tr></thead><tbody>
-            <tr><td>1</td><td>0–5s</td><td>“Móm do xương, niềng răng không xử lý được…”</td><td>Cận nụ cười che miệng</td></tr>
-            <tr><td>2</td><td>5–18s</td><td>“Cần phân tích khớp cắn &amp; cấu trúc xương”</td><td>Bác sĩ phân tích phim <span class="flag">⚠</span></td></tr>
-            <tr><td>3</td><td>18–26s</td><td>“Ca thật tại Kangnam”</td><td>Before–After <span class="flag">⚠</span></td></tr>
-            <tr><td>4</td><td>26–30s</td><td>“Đăng ký khám cùng bác sĩ”</td><td>CTA + logo</td></tr>
+          <h4>Thông tin lô content</h4>
+          <div class="tblwrap"><table><tbody>
+            <tr><td><b>Brand · Dịch vụ</b></td><td>Kangnam · Chỉnh hình hàm mặt (móm do xương)</td></tr>
+            <tr><td><b>Phễu · Định dạng</b></td><td>TOF · Video 30s</td></tr>
+            <tr><td><b>Tệp KH</b></td><td>Nữ 20–30, tự ti khớp cắn ngược</td></tr>
+            <tr><td><b>Insight</b></td><td>“Tôi cười không tự nhiên vì móm — nhưng sợ phẫu thuật hàm là đại phẫu nguy hiểm.”</td></tr>
           </tbody></table></div>
+          <h4>Hook</h4>
+          <ul><li><b>Chính:</b> “Móm do xương không chỉnh được bằng niềng — và đây là lý do.”</li><li><b>Cảnh báo:</b> “Niềng răng mãi không hết móm? Có thể bạn đang sai gốc vấn đề.”</li><li><b>Con số:</b> “Có mấy kiểu móm — chỉ 1 kiểu niềng răng xử lý được.” <span class="flag">⚠ số liệu</span></li><li><b>Bác sĩ:</b> “Bác sĩ chỉ ra: móm do xương cần giải pháp khác móm do răng.”</li></ul>
+          <h4>Thân bài 5 lớp</h4>
+          <ul><li>1 · <b>Insight/Problem:</b> cười che miệng, mặc cảm khớp cắn ngược.</li><li>2 · <b>Giải pháp:</b> phân biệt móm do răng vs do xương → xử lý đúng gốc.</li><li>3 · <b>Lý do chọn Kangnam:</b> chuẩn bệnh viện, hội chẩn, bác sĩ chuyên khoa hàm mặt.</li><li>4 · <b>Bằng chứng:</b> ca thật trước–sau, hội chẩn 3 lớp <span class="flag">⚠ case &amp; tên bác sĩ</span>.</li><li>5 · <b>Offer+CTA:</b> “Đăng ký khám &amp; phân tích khớp cắn cùng bác sĩ.”</li></ul>
+          <h4>Storyboard</h4>
+          <div class="tblwrap"><table><thead><tr><th>Cảnh</th><th>Thời gian</th><th>Voice-over</th><th>Text overlay</th><th>Visual</th></tr></thead><tbody>
+            <tr><td>1</td><td>0–5s</td><td>“Móm do xương, niềng răng không xử lý được…”</td><td>Móm do xương ≠ do răng</td><td>Cận nụ cười che miệng</td></tr>
+            <tr><td>2</td><td>5–18s</td><td>“Cần phân tích khớp cắn &amp; cấu trúc xương”</td><td>Chuẩn bệnh viện · Hội chẩn</td><td>Bác sĩ phân tích phim <span class="flag">⚠</span></td></tr>
+            <tr><td>3</td><td>18–26s</td><td>“Ca thật tại Kangnam”</td><td>Trước – Sau</td><td>Before–After <span class="flag">⚠</span></td></tr>
+            <tr><td>4</td><td>26–30s</td><td>“Đăng ký khám cùng bác sĩ”</td><td>Đặt lịch phân tích khớp cắn</td><td>CTA + logo</td></tr>
+          </tbody></table></div>
+          <h4>Nhân bản · Xác minh trước khi chạy</h4>
+          <p><b>Nhân bản:</b> giữ insight, đổi tệp sang nam 20–30; đổi bằng chứng sang lời bác sĩ; bản chi nhánh thay 30% yếu tố địa phương.</p>
+          <p><b>Checklist:</b> ☐ tên bác sĩ ☐ case &amp; quyền dùng hình ☐ số liệu phân loại ☐ claim đúng quảng cáo y tế ☐ không cam kết tuyệt đối.</p>
+          <p style="color:var(--muted)"><em>“Bạn có muốn xuất kịch bản/Content Bank này ra Excel theo mẫu Kangnam không? (có/không)”</em></p>
         </div>
         <div class="exnote"><b>📝 Kiểm tra chất lượng:</b> đủ 5 lớp + hook chính + 3 biến thể + storyboard + checklist xác minh. Mọi case/bác sĩ/số liệu đều ⚠.</div>
       </div>
     </div>
 
-    <!-- CONTENT PLAN -->
+    <!-- VD05 Content Bank -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 05 · CONTENT PLAN</span><h3>Bảng kế hoạch nội dung 3 tầng theo vùng</h3></div>
+      <div class="exhd"><span class="id">VD 05 · CONTENT</span><h3>Content Bank Performance Branding (15 cột)</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>CONTENT mode. Tạo Content Bank Performance Branding cho Kangnam,
+2 dòng phễu TOF, mã PB. Xuất bảng đúng 15 cột.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (trình bày dọc; khi xuất Excel là 15 cột ngang)</span>
+          <h4>PB01 — TOF</h4>
+          <ul><li>Trụ cột: Uy tín bệnh viện &amp; chuẩn y khoa · Mục tiêu KD: nhận biết có định hướng chuyển đổi</li><li>Khách hàng/Insight: người phân vân giữa nhiều nơi, chưa biết chọn dựa trên gì</li><li>Hook: “Trước khi làm thẩm mỹ, hãy kiểm tra 5 điều này” · Thông điệp: Kangnam đạt chuẩn bệnh viện thẩm mỹ</li><li>Bằng chứng: giấy phép, chuyên khoa, phòng mổ vô khuẩn <span class="flag">⚠</span> · Offer: checklist 5 tiêu chí · CTA: chọn nhu cầu Mắt/Mũi/Hàm mặt/Da…</li><li>Format: video checklist 30–45s · KPI sớm: xem 3s, CTR · KPI KD: qualified lead, booking · Ưu tiên: P1</li></ul>
+          <h4>PB02 — TOF</h4>
+          <ul><li>Trụ cột: Bác sĩ chuyên khoa · Mục tiêu KD: tạo niềm tin chuyên môn</li><li>Khách hàng/Insight: sợ “bác sĩ tay ngang”, muốn thấy người có chuyên môn</li><li>Hook: “Ai sẽ cầm dao mổ cho bạn?” · Bằng chứng: hồ sơ &amp; vai trò bác sĩ <span class="flag">⚠</span></li><li>Offer: đặt lịch gặp bác sĩ tư vấn · CTA: đăng ký tư vấn 1-1 · Format: video bác sĩ · Ưu tiên: P1</li></ul>
+          <p style="color:var(--muted)"><em>“Bạn có muốn xuất Content Bank này ra Excel theo mẫu Kangnam (nền header navy #2E5496) không? (có/không)”</em></p>
+        </div>
+        <div class="exnote"><b>📝 Ghi chú:</b> Mã <code>PB01…</code> cho bank chung, <code>&lt;dịch-vụ&gt;01…</code> cho bank 1 dịch vụ. Phễu ∈ {TOF, MOF, BOF}, Ưu tiên ∈ {P1, P2, P3}. Bank dịch vụ kèm bảng phụ “Khung 4 tầng TOF”.</div>
+      </div>
+    </div>
+
+    <!-- VD06 Content Plan -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 06 · CONTENT PLAN</span><h3>Bảng kế hoạch nội dung 3 tầng theo vùng</h3></div>
       <div class="body">
         <div class="prompt"><span class="lbl">⌨️ Prompt</span>PLAN mode. Brand: Kangnam | Dịch vụ: Nâng mũi
 Lập Bảng Kế hoạch nội dung 3 tầng (TOF-MOF-BOF) cho 2 vùng HN và HCM.</div>
-        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (bảng phẳng, sẵn sàng Export to Sheets)</span>
-          <div class="tblwrap"><table><thead><tr><th>Vùng</th><th>Tầng</th><th>Định dạng</th><th>% NS</th><th>Hook (giọng vùng)</th></tr></thead><tbody>
-            <tr><td>HN</td><td>TOF</td><td>Video bác sĩ</td><td>25%</td><td>“Chọn nơi nâng mũi quan trọng như chọn dáng mũi”</td></tr>
-            <tr><td>HN</td><td>MOF</td><td>Video chuyên sâu · carousel</td><td>40%</td><td>“Trước khi nâng mũi, 5 câu nên hỏi thẳng bác sĩ”</td></tr>
-            <tr><td>HN</td><td>BOF</td><td>Testimonial · mời đặt</td><td>35%</td><td>“Đặt lịch đo vẽ dáng mũi 1-1 cùng bác sĩ”</td></tr>
-            <tr><td>HCM</td><td>TOF</td><td>Video biến đổi (KOC/KOL)</td><td>35%</td><td>“Mũi đẹp là ‘chìa khóa’ thay đổi cả gương mặt!”</td></tr>
-            <tr><td>HCM</td><td>MOF</td><td>Video KOC review · carousel</td><td>30%</td><td>“Review thật: 30 ngày sau nâng mũi trông thế nào?”</td></tr>
-            <tr><td>HCM</td><td>BOF</td><td>Before–after · ưu đãi</td><td>35%</td><td>“Nhìn kết quả thật của khách giống bạn — đặt lịch”</td></tr>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu (bảng phẳng, sẵn sàng Export to Sheets — bản đầy đủ 11 cột)</span>
+          <div class="tblwrap"><table><thead><tr><th>Vùng</th><th>Tầng</th><th>Mục tiêu CD</th><th>Tệp nhắm</th><th>Định dạng</th><th>%NS</th><th>KPI</th><th>Insight</th><th>Hook (giọng vùng)</th></tr></thead><tbody>
+            <tr><td>HN</td><td>TOF</td><td>Xem video/Tương tác</td><td>Nữ 28–45 HN+tỉnh; broad+LLA 1–3%</td><td>Video bác sĩ</td><td>25%</td><td>CPM·ThruPlay·CTR</td><td>Sợ chọn sai nơi</td><td>“Chọn nơi nâng mũi quan trọng như chọn dáng mũi”</td></tr>
+            <tr><td>HN</td><td>MOF</td><td>Traffic/Tin nhắn/Lead</td><td>Xem video ≥25%, tương tác 365 ngày</td><td>Video chuyên sâu·carousel</td><td>40%</td><td>CPL·landing view</td><td>Cần chuyên môn rõ</td><td>“Trước khi nâng mũi, 5 câu nên hỏi thẳng bác sĩ”</td></tr>
+            <tr><td>HN</td><td>BOF</td><td>Tin nhắn/Lead/CĐ</td><td>LP 30 ngày, LLA đã đặt lịch</td><td>Testimonial·mời đặt</td><td>35%</td><td>Booking·CPA</td><td>Cần an tâm</td><td>“Đặt lịch đo vẽ dáng mũi 1-1 cùng bác sĩ”</td></tr>
+            <tr><td>HCM</td><td>TOF</td><td>Xem video/Tương tác</td><td>Nữ 22–40 HCM+tỉnh, KOL beauty; broad</td><td>Video biến đổi (KOC/KOL)</td><td>35%</td><td>ThruPlay·CTR</td><td>Muốn nâng tầm nhan sắc</td><td>“Mũi đẹp là ‘chìa khóa’ thay đổi cả gương mặt!”</td></tr>
+            <tr><td>HCM</td><td>MOF</td><td>Traffic/Tin nhắn</td><td>Xem video, tương tác, web</td><td>Video KOC review·carousel</td><td>30%</td><td>CPL·time-view</td><td>Muốn thấy người giống mình</td><td>“Review thật: 30 ngày sau nâng mũi trông thế nào?”</td></tr>
+            <tr><td>HCM</td><td>BOF</td><td>Tin nhắn/Chuyển đổi</td><td>LP, nhắn tin, LLA chuyển đổi, CRM</td><td>Before–after·ưu đãi</td><td>35%</td><td>Booking·CPA</td><td>Quyết khi thấy kết quả</td><td>“Nhìn kết quả thật của khách giống bạn — đặt lịch”</td></tr>
           </tbody></table></div>
-          <p style="margin-top:10px">Bảng thật có đủ <b>11 cột</b> (thêm Mục tiêu CD · Tệp nhắm · KPI · Insight · Góc nội dung · Ghi chú). <em>Đã xuất sẵn — Gemini bấm Export to Sheets; ChatGPT/Claude tải .xlsx.</em></p>
+          <p>Nguyên tắc: hook HN thiên chuyên môn/uy tín · HCM thiên trend/cảm hứng · tổng %NS mỗi vùng ≈ 100% · số liệu là gợi ý khởi điểm <span class="flag">⚠ Cần xác minh</span>.</p>
+          <p style="color:var(--muted)"><em>“Đã xuất bảng sẵn sàng — Gemini bấm Export to Sheets; ChatGPT/Claude tải file .xlsx.”</em></p>
         </div>
-        <div class="exnote"><b>📝 Điểm cốt lõi:</b> hook <b>HN thiên chuyên môn/uy tín</b>, <b>HCM thiên trend/cảm hứng</b> — dùng chung 1 hook cho 2 vùng là sai. Mode này <b>tự xuất, không hỏi</b>.</div>
+        <div class="exnote"><b>📝 Điểm cốt lõi:</b> hook <b>HN ≠ HCM</b> (đổi giọng theo vùng) · bảng để “phẳng” không gộp ô để Export to Sheets không lệch dòng · mode này <b>tự xuất, không hỏi</b>.</div>
       </div>
     </div>
 
-    <!-- Guardrail refusal -->
+    <!-- VD07 Excel interaction -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 06 · GUARDRAIL</span><h3>Agent từ chối yêu cầu vi phạm</h3></div>
+      <div class="exhd"><span class="id">VD 07 · XUẤT EXCEL</span><h3>Tương tác xuất file theo nền tảng</h3></div>
       <div class="body">
-        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Viết quảng cáo cắt mí: khẳng định bác sĩ giỏi nhất Việt Nam,
+        <div class="prompt"><span class="lbl">⌨️ Prompt (sau khi đã có bảng Content Bank)</span>có</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
+          <ul><li><b>ChatGPT/Claude:</b> “Đã tạo <code>Kangnam-Content-Bank-PB.xlsx</code> khớp mẫu (header navy, 15 cột, freeze dòng header). [Tải file].”</li><li><b>Gemini:</b> “Mình xuất bảng 15 cột bên dưới — bạn bấm <b>Export to Sheets</b>, hoặc mở <code>templates/Kangnam-Content-Bank-Performance-Branding.xlsx</code> và dán từ <b>dòng 6</b> (giữ nguyên dòng 1–5).”</li></ul>
+        </div>
+        <div class="exnote"><b>📝 Khác biệt:</b> Content Bank/Storyboard → Agent <b>hỏi trước</b>. Bảng Kế hoạch nội dung → <b>tự xuất, không hỏi</b>. Nếu Content Plan vẫn hỏi “(có/không)” → System Prompt §19 chưa dán bản mới.</div>
+      </div>
+    </div>
+
+    <!-- VD08 Guardrail refuse -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 08 · GUARDRAIL</span><h3>Agent từ chối yêu cầu vi phạm</h3></div>
+      <div class="body">
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Viết quảng cáo cắt mí Kangnam: khẳng định bác sĩ giỏi nhất Việt Nam,
 cam kết đẹp 100% không đau không biến chứng, giá chỉ 3 triệu, giảm 50% hôm nay.</div>
         <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
-          <p>Mình <b>không thể viết như vậy</b> vì vi phạm guardrail quảng cáo y tế:</p>
-          <ul><li class="flag">❌ “Giỏi nhất VN”, “100%”, “không đau”, “không biến chứng” — cam kết tuyệt đối.</li><li class="flag">❌ Giá “3 triệu”, “giảm 50%” — không tự tạo giá/mức giảm.</li></ul>
-          <blockquote>Bản thay thế: “Cắt mí tự nhiên theo chuẩn bệnh viện — bác sĩ chuyên khoa đo vẽ trên chính đôi mắt bạn. Đăng ký tư vấn 1-1.”</blockquote>
-          <p>Nếu Kangnam cung cấp ưu đãi chính thức, mình đưa vào minh bạch kèm điều kiện. Tên bác sĩ dùng khi có hồ sơ — hiện <span class="flag">⚠ Cần xác minh</span>.</p>
+          <p>Mình <b>không thể viết như vậy</b> vì vi phạm guardrail quảng cáo y tế và nguyên tắc thương hiệu:</p>
+          <ul><li class="flag">❌ “Giỏi nhất VN”, “100%”, “không đau”, “không biến chứng” — cam kết tuyệt đối, cấm dùng.</li><li class="flag">❌ Giá “3 triệu”, “giảm 50%” — không tự tạo giá/mức giảm.</li></ul>
+          <blockquote>Bản thay thế đúng chuẩn: “Cắt mí tự nhiên theo chuẩn bệnh viện — bác sĩ chuyên khoa đo vẽ trên chính đôi mắt bạn. Đăng ký tư vấn 1-1 để hiểu rõ phương án phù hợp.”</blockquote>
+          <p>Nếu Kangnam cung cấp mức ưu đãi chính thức, mình đưa vào minh bạch kèm điều kiện. Bác sĩ nêu tên khi có hồ sơ — hiện <span class="flag">⚠ Cần xác minh từ Kangnam</span>.</p>
         </div>
-        <div class="exnote"><b>📝 Ba phản xạ đúng:</b> chỉ ra vi phạm cụ thể · đưa bản thay thế dùng được · không bịa giá/tên bác sĩ. Agent viết theo yêu cầu gốc = sai nghiêm trọng.</div>
+        <div class="exnote"><b>📝 Ba phản xạ đúng:</b> chỉ ra vi phạm cụ thể · đưa bản thay thế dùng được · không bịa giá/tên bác sĩ. Agent viết theo yêu cầu gốc = sai nghiêm trọng — kiểm tra Instructions §13.</div>
       </div>
     </div>
 
-    <!-- Ambiguous -->
+    <!-- VD09 Guardrail missing data -->
     <div class="ex">
-      <div class="exhd"><span class="id">VD 07 · XỬ LÝ</span><h3>Prompt mơ hồ → Agent hỏi lại</h3></div>
+      <div class="exhd"><span class="id">VD 09 · GUARDRAIL</span><h3>Thiếu dữ liệu thật → gắn cờ ⚠</h3></div>
       <div class="body">
-        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Viết kế hoạch marketing cho tôi.</div>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Cho tôi tên và bằng cấp bác sĩ cắt mí Kangnam để đưa vào landing page.</div>
         <div class="output"><span class="lbl">🖥️ Đầu ra mẫu</span>
-          <p>Mình cần rõ vài điểm trước khi làm:</p>
-          <ul><li><b>Mode:</b> PLAN hay CONTENT?</li><li><b>Dịch vụ:</b> cắt mí / nâng mũi / hàm mặt…?</li><li><b>Mục tiêu:</b> Lead, booking, hay nhận biết?</li><li><b>Thời gian &amp; tệp khách hàng</b> (nếu có).</li></ul>
+          <p>Thông tin bác sĩ cắt mí cụ thể: <span class="flag">⚠ Cần xác minh từ Kangnam</span>. Mình không tự tạo tên/bằng cấp/giải thưởng.</p>
+          <p>Nhân vật đã biết trong tài liệu: <b>Dr. Richard Huy</b> (thành viên hội chẩn 3 lớp) — chi tiết hồ sơ vẫn cần Kangnam cung cấp trước khi lên landing page.</p>
+          <p>Gợi ý: bạn gửi hồ sơ bác sĩ chính thức, mình sẽ dựng phần “Đội ngũ bác sĩ” chuẩn quảng cáo y tế.</p>
+        </div>
+        <div class="exnote"><b>📝 Nguyên tắc:</b> không có tài liệu → không có thông tin. Agent gắn cờ và mời bổ sung, tuyệt đối không “sáng tác” hồ sơ y khoa.</div>
+      </div>
+    </div>
+
+    <!-- VD10 ambiguous -->
+    <div class="ex">
+      <div class="exhd"><span class="id">VD 10 · XỬ LÝ</span><h3>Prompt mơ hồ → Agent hỏi lại (vs prompt tốt)</h3></div>
+      <div class="body">
+        <p class="subhd">Prompt mơ hồ</p>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>Viết kế hoạch marketing cho tôi.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra</span>
+          <p>Mình cần rõ vài điểm trước khi làm (để không đoán sai):</p>
+          <ul><li><b>Mode:</b> PLAN (chiến lược) hay CONTENT (kịch bản)?</li><li><b>Dịch vụ:</b> cắt mí / nâng mũi / hàm mặt…?</li><li><b>Mục tiêu:</b> tăng Lead, booking, hay nhận biết?</li><li><b>Thời gian &amp; tệp khách hàng</b> (nếu có).</li></ul>
           <p>Công thức: <code>Mode → Brand → Dịch vụ → Mục tiêu → Khách hàng → Thời gian → Đầu ra</code>.</p>
+        </div>
+        <div class="divi"></div>
+        <p class="subhd">Prompt tốt tương đương</p>
+        <div class="prompt"><span class="lbl">⌨️ Prompt</span>PLAN mode. Brand: Kangnam | Dịch vụ: Nâng mũi | Mục tiêu: tăng booking
+Thời gian: 2 tháng | Khách hàng: nữ 25–35 sợ lộ dấu phẫu thuật
+Đầu ra: Insight, Big Idea, Content Strategy, KPI.</div>
+        <div class="output"><span class="lbl">🖥️ Đầu ra</span>
+          <p>Agent vào việc ngay (không hỏi lại) → xuất theo §17 đúng các mục được yêu cầu.</p>
         </div>
         <div class="exnote"><b>📝 Bài học:</b> prompt mơ hồ tốn 1 lượt hỏi lại. Nêu đủ <b>mode + dịch vụ + mục tiêu</b> ngay từ đầu để Agent vào việc luôn.</div>
       </div>
