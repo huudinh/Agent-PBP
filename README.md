@@ -36,6 +36,7 @@ Bạn là ai, làm được gì, đang nạp brand nào? Phân biệt 2 mode.
 
 | File | Nội dung |
 |---|---|
+| [doc/tong-quan.html](doc/tong-quan.html) | 🎯 Trang tổng quan trực quan các chức năng (mở bằng trình duyệt) |
 | [SYSTEM-PROMPT.md](SYSTEM-PROMPT.md) | System Prompt để dán vào Instructions (bộ não Agent) |
 | [doc/01-cai-dat.md](doc/01-cai-dat.md) | Cài đặt Gemini/ChatGPT/Claude · chiến lược file · upload template · thêm brand/dịch vụ · xử lý sự cố |
 | [doc/02-cau-lenh.md](doc/02-cau-lenh.md) | 2 mode · công thức ra lệnh · prompt ví dụ |

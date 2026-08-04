@@ -5,6 +5,10 @@
 
 ---
 
+## 2026-08-04 · Trang tổng quan chức năng
+
+- Thêm [`doc/tong-quan.html`](tong-quan.html) — trang tổng quan trực quan (self-contained, sáng/tối tự động): 3 chế độ, engine tư duy, kiến trúc 3 tầng, nền kiến thức, xuất Excel, guardrails, vận hành. Màu phân loại trùng đúng hệ màu 3 template Excel.
+
 ## 2026-08-03 · Tái cấu trúc tài liệu
 
 - Tách **System Prompt** ra file riêng [`SYSTEM-PROMPT.md`](../SYSTEM-PROMPT.md) (để dán vào Instructions).
