@@ -5,6 +5,21 @@
 
 ---
 
+
+## Đồng bộ dữ liệu bác sĩ & cơ sở với site production — 16/10/2026
+
+Đối chiếu trực tiếp `/doi-ngu-bac-si/` · `/chi-nhanh/` · menu chính (16/10/2026). **Chỉ sửa file tri thức brand, không đụng bộ não.**
+
+**Sửa `knowledge/kangnam-brand.md` — danh sách cơ sở.** Trang `/chi-nhanh/` hiện công bố **7 cơ sở tại 7 tỉnh thành**: 2 bệnh viện (Hà Nội 190 Trường Chinh — GP **194/BYT-GPHĐ**; Sài Gòn 666 CM Tháng 8 — GP **287/BYT-GPHĐ**) + 5 viện thẩm mỹ (Hải Phòng · Nghệ An · Đà Nẵng · Cần Thơ · Thanh Hóa). File đang ghi *"3 bệnh viện + 7 viện"* (10 cơ sở).
+
+⚠️ **Ba cơ sở trong bảng không có trên `/chi-nhanh/`** — đã gắn cờ, **chưa xoá**: `BVTM Kangnam CS2 – 218 Nguyễn Trãi` · `Viện Trẻ hoá & Điều trị da công nghệ cao – 194 Trường Chinh` · `Chi nhánh Bình Dương`.
+Chưa đủ căn cứ nói ba cơ sở này đã đóng (có thể là pháp nhân khác hoặc trang chưa cập nhật). Nhưng nội dung local nói về **địa điểm**, nên nêu sai một cơ sở là chạm rào **R3 (đúng pháp nhân)**.
+
+→ **Luật tạm thời: nội dung local chỉ dùng 7 cơ sở có trên `/chi-nhanh/`.** Ba cơ sở còn lại chỉ dùng sau khi Pháp chế xác nhận còn hoạt động và còn giấy phép.
+Chụp lại: `python ../Agent-LDP-Kangnam/tools/fetch-du-lieu.py --chi co_so`
+
+---
+
 ## 2026-08-04 · Trang đào tạo hợp nhất
 
 - [`doc/tong-quan.html`](tong-quan.html) trở thành **trang đào tạo 1-file**: bản đồ năng lực + khối **"Prompt đầu vào → Đầu ra mẫu" đầy đủ** (10 ví dụ: khởi động, PLAN §17 đầy đủ, prompt theo bước, CONTENT + storyboard, Content Bank, Content Plan, xuất Excel, 2 guardrail, prompt mơ hồ) + 5 bài tập. Có nav dính, tông màu ấm, sáng/tối tự động.

@@ -46,13 +46,15 @@ Kiến thức nền tảng về thương hiệu, doanh nghiệp, USP và chiến
 
 3 Bệnh viện thẩm mỹ + 7 Viện thẩm mỹ toàn quốc.
 
+> 🔧 **Đối chiếu `/chi-nhanh/` 2026-10-16:** trang chính thức công bố **7 cơ sở** — 2 bệnh viện (Hà Nội 190 Trường Chinh, GP 194/BYT-GPHĐ · Sài Gòn 666 CM Tháng 8, GP 287/BYT-GPHĐ) + 5 viện thẩm mỹ (Hải Phòng · Nghệ An · Đà Nẵng · Cần Thơ · Thanh Hóa). **Ba cơ sở dưới đây không có trên trang đó** (218 Nguyễn Trãi · 194 Trường Chinh · Bình Dương) → chỉ dùng sau khi Pháp chế xác nhận; nêu sai cơ sở là rào **R3**.
+
 **Sài Gòn:**
 - CS1: BVTM Kangnam Sài Gòn – 666 Cách Mạng Tháng 8
-- CS2: BVTM Kangnam – 218 Nguyễn Trãi
+- CS2: BVTM Kangnam – 218 Nguyễn Trãi ⚠️ *không có trên /chi-nhanh/ 16/10/2026 — xác minh trước khi dùng*
 
 **Hà Nội:**
 - BVTM Kangnam Hà Nội – 190 Trường Chinh
-- Viện Trẻ hóa & điều trị da công nghệ cao – 194 Trường Chinh
+- Viện Trẻ hóa & điều trị da công nghệ cao – 194 Trường Chinh ⚠️ *không có trên /chi-nhanh/ 16/10/2026 — xác minh trước khi dùng*
 
 **Chi nhánh:**
 - Đà Nẵng: 293 Hùng Vương, Thanh Khê
@@ -60,7 +62,7 @@ Kiến thức nền tảng về thương hiệu, doanh nghiệp, USP và chiến
 - Hải Phòng: 378 Tô Hiệu, Lê Chân
 - Nghệ An: 148 Nguyễn Văn Cừ, TP. Vinh
 - Cần Thơ: 28 Lý Tự Trọng, Ninh Kiều
-- Bình Dương: 8D9 KDC Chánh Nghĩa, TP. Thủ Dầu Một
+- Bình Dương: 8D9 KDC Chánh Nghĩa, TP. Thủ Dầu Một ⚠️ *không có trên /chi-nhanh/ 16/10/2026 — xác minh trước khi dùng*
 
 **Chương trình tiêu biểu:** *"Hành Trình Lột Xác"* (7 mùa) — chương trình nhân văn & quy mô nhất về PTTM tại Việt Nam; minh chứng năng lực xử lý ca khó.
 
